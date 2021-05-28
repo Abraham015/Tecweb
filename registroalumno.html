@@ -11,32 +11,32 @@
         <table align="center">
             <tr>
                 <td><label for ="boleta">No. de boleta:</label></td>
-                <td><input type="number" id="boleta" name="boleta" size="10" maxlength="10"/></td>
+                <td><input type="number" id="boleta" name="boleta" size="10" maxlength="10" required/></td>
             </tr>
             <tr>
                 <td><label for ="nombre">Nombre(s):</label></td>
-                <td><input type="text" id="nombre" name="nombre" size="30" maxlength="30"/></td>
+                <td><input type="text" id="nombre" name="nombre" size="30" maxlength="30" required /></td>
             </tr>
             <tr>
                 <td><label for ="apaterno">Apellido Paterno:</label></td>
-                <td><input type="text" id="apaterno" name="apaterno" size="30" maxlength="30"/></td>
+                <td><input type="text" id="apaterno" name="apaterno" size="30" maxlength="30" required /></td>
             </tr>
             <tr>
                 <td><label for ="amaterno">Apellido Materno:</label></td>
-                <td><input type="text" id="amaterno" name="amaterno"size="30" maxlength="30"/></td>
+                <td><input type="text" id="amaterno" name="amaterno"size="30" maxlength="30" required /></td>
             </tr>
             <tr>
                 <td><label for ="nacimiento">Fecha de nacimiento:</label></td>
-                <td><input type="date" name="fecha" size="10" maxlength="15"/></td>
+                <td><input type="date" name="fecha" size="10" maxlength="15" required /></td>
             </tr>
             <tr>
                 <td><label for ="genero">G&eacute;nero:</label></td>
-                  <td><input type="radio" name="mf" value="m"> Masculino
-                      <input type="radio" name="mf" value="f"> Femenino</td>
+                  <td><input type="radio" name="mf" value="m" required> Masculino
+                      <input type="radio" name="mf" value="f" required> Femenino</td>
             </tr>
             <tr>
                 <td><label for ="curp">CURP:</label></td>
-                <td><input type="alphanumeric" name="curp" size="18" maxlength="18"/></td>
+                <td><input type="alphanumeric" name="curp" size="18" maxlength="18" required /></td>
             </tr>
             </table>
     </fieldset>
@@ -44,19 +44,19 @@
         <legend>Contacto :</legend>
         <table align="center">
             <tr>
-              <td>Calle y N&uacutemero: <input type="text" name="calle"></td>
+              <td>Calle y N&uacutemero: <input type="text" name="calle" required></td>
             </tr>
             <tr>
-              <td>Colonia: <input type="text" name="colonia"></td> 
+              <td>Colonia: <input type="text" name="colonia" required></td> 
             </tr>
             <tr>
-              <td>C&oacutedigo Postal: <input type="number" name="CP"></td>
+              <td>C&oacutedigo Postal: <input type="number" name="CP" required></td>
             </tr>
             <tr>
-              <td>Tel&eacutefono o celular: <input type="number" name="cel"></td>
+              <td>Tel&eacutefono o celular: <input type="number" name="cel" required></td>
             </tr>
             <tr>
-              <td>Correo Electr&oacutenico: <input type="text" name="correo"></td>
+              <td>Correo Electr&oacutenico: <input type="text" name="correo" required></td>
             </tr>
         </table>
     </fieldset>
@@ -64,7 +64,7 @@
         <legend>Procedencia :</legend>
         <table align="center">
               <tr>
-                <td>Escuela de Procedencia:<select name="Procedencia">
+                <td>Escuela de Procedencia:<select name="Procedencia" required>
                   <option value="default">Escoge una opci&oacuten</option>
                   <option value="1">CECyT #1 "Gonzalo V&aacutezquez Vela"</option>
                   <option value="2">CECyT #2 "Miguel Bernard"</option>
@@ -89,7 +89,7 @@
                 </td>
               </tr>
               <tr>
-                <td>Entidad Federativa de Procedencia:<select name="Estado">
+                <td>Entidad Federativa de Procedencia:<select name="Estado" required>
                   <option value="default">Escoge una opci&oacuten</option>
                   <option value="Agua">Aguascalientes</option>
                   <option value="Baja">Baja California</option>
@@ -133,7 +133,7 @@
                 <td>Nombre de la escuela: <input type="text" name="school"></td>
               </tr>
               <tr>
-                <td>Promedio: <input type="number" name="promedio"></td>
+                <td>Promedio: <input type="text" name="promedio" required></td>
               </tr>
               <tr>
                 <td>ESCOM fue tu:</td>
@@ -153,7 +153,7 @@
           </table>
     </fieldset>
     <br>
-    <center><input type="submit" value="Enviar"/>&nbsp;<input type="reset" value="Limpiar"/></center>
+    <center><input type="submit" value="Validacion"/>&nbsp;<input type="reset" value="Limpiar"/></center>
 </form>
 </body>
 </html>
