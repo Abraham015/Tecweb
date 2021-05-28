@@ -43,17 +43,17 @@
     if ($conn->query($identidad) === TRUE) {
              //echo "New record created successfully";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $identidad . "<br>" . $conn->error;
     }
     if ($conn->query($contacto) === TRUE) {
         //echo "New record created successfully";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $contacto . "<br>" . $conn->error;
     }
     if ($conn->query($pro) === TRUE) {
         echo "New record created successfully";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $pro . "<br>" . $conn->error;
     }
        echo "<form method='POST' action='confirmaciondatos.php'>";
     $conn->close();
