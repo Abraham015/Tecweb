@@ -2,7 +2,7 @@ create database proyecto;
 use proyecto;
 
 create table identidad(
-    Boleta varchar(10) primary key,
+	Boleta varchar(10) primary key unique,
     Nombre varchar(30),
     AP varchar(30),
     AM varchar(30),
@@ -12,7 +12,7 @@ create table identidad(
 );
 
 create table Contacto(
-    Calle varchar(250),
+	Calle varchar(250),
     Colonia varchar(100),
     CP int,
     Celular int,
@@ -20,7 +20,7 @@ create table Contacto(
 );
 
 create table Procedencia(
-    Escuela varchar(400),
+	Escuela varchar(400),
     Entidad varchar(30),
     Promedio int,
     opcion varchar(15)
