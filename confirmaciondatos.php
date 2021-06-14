@@ -17,7 +17,7 @@
         // Pie de página
         function Footer()
         {
-            $this->Image('./images/Comprobante.png',22.5,230,175);
+            $this->Image('./images/pie.png',22.5,230,175);
             $this->Ln(100);
         }
     }
@@ -47,6 +47,7 @@
         $var="Datos ingresados correctamente";
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
+        $conn->set_charset('utf8');
         // Check connection
         if ($conn->connect_error) {
           die("Connection failed: " . $conn->connect_error);
@@ -55,11 +56,11 @@
     $identidad = "INSERT INTO identidad (Boleta,Nombre,AP,AM,fecha,Genero,CURP)
     VALUES ($bol,'$nom','$apellido','$ape','$fe','$gen','$curp')";
 
-    $contacto="INSERT INTO Contacto (Calle,Colonia,CP,Celular,Correo)
-    VALUES ('$calle','$colonia',$CP,$cel,'$correo')";
+    $contacto="INSERT INTO Contacto (Calle,Colonia,CP,Celular,Correo,Boleta)
+    VALUES ('$calle','$colonia',$CP,$cel,'$correo',$bol)";
 
-    $pro="INSERT INTO Procedencia (Escuela,Entidad,Promedio,opcion)
-    VALUES ('$procedencia','$estado',$promedio,'$opcion')";
+    $pro="INSERT INTO Procedencia (Escuela,Entidad,Promedio,opcion,Boleta)
+    VALUES ('$procedencia','$estado',$promedio,'$opcion',$bol)";
 
     if ($conn->query($identidad) === TRUE) {
              //echo "New record created successfully";

@@ -1,0 +1,54 @@
+.datos{
+	background-image:url(images/wef-min);  
+	background-position: center;
+	background-attachment: fixed; 
+	background-size:cover;
+}
+
+#tabla-container{
+	margin:150px auto;
+	width: 600px;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-60%,-120%);
+
+}
+
+table{
+	background-color: white;
+	text-align: center;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td{
+	padding: 20px;
+}
+
+img{
+	width: 45px;
+	height: 45px;
+}
+
+.modificar{
+	background-size: 100%,100%;
+	border:none;
+	cursor: pointer;
+	padding: 5px 15px;
+}
+
+thead{
+	background-color: #246355;
+	border-bottom: 5px solid #0F362D;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: #DDD;
+}
+
+tr:hover{
+	background-color: #369681;
+	color: white;
+}
