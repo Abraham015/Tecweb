@@ -1,13 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>.: Registro Alumnos :. </title>
+    <link rel="stylesheet" href="EstiloFormulario.css">
+    <script src="jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <p align="center"><b><big>REGISTRO DE DATOS GENERALES<br>Alumnos de Nuevo Ingreso<br>(Agosto 2021)</big></b></p>
-<form method="POST" action="datos.php">
-    <fieldset>
-        <legend>Identidad : </legend>
+    <h1 align="center">Registro de Datos Generales</h1>
+    <p>Alumnos de Nuevo Ingreso
+    <br>(Agosto 2021)</p>
+<div class="container">
+    <div class="wrapper">
+      <ul class="steps">
+        <li class="is-active">Identidad</li>
+        <li>Contacto</li>
+        <li>Procedencia</li>
+      </ul>
+      <form class="form-wrapper">
+    <fieldset class="section is-active">      
+    <h2>Identidad</h2>
         <table align="center">
             <tr>
                 <td><label for ="boleta">No. de boleta:</label></td>
@@ -32,16 +46,17 @@
             <tr>
                 <td><label for ="genero">G&eacute;nero:</label></td>
                   <td><input type="radio" name="mf" value="m" required> Masculino
-                      <input type="radio" name="mf" value="f" required> Femenino</td>
+                  <input type="radio" name="mf" value="f" required> Femenino</td>
             </tr>
             <tr>
                 <td><label for ="curp">CURP:</label></td>
                 <td><input type="alphanumeric" name="curp" size="18" maxlength="18" required /></td>
             </tr>
             </table>
-    </fieldset>
-    <fieldset>
-        <legend>Contacto :</legend>
+            <div class="button">Siguiente</div>
+    </fieldset> 
+    <fieldset class="section">
+        <h2 class="fs-title">Contacto</h2>
         <table align="center">
             <tr>
               <td>Calle y N&uacutemero: <input type="text" name="calle" required></td>
@@ -50,21 +65,22 @@
               <td>Colonia: <input type="text" name="colonia" required></td> 
             </tr>
             <tr>
-              <td>C&oacutedigo Postal: <input type="number" name="CP" required></td>
+              <td>C&oacutedigo Postal: <br> <input type="number" name="CP" required></td>
             </tr>
             <tr>
-              <td>Tel&eacutefono o celular: <input type="number" name="cel" required></td>
+              <td>Tel&eacutefono o celular: <br><input type="number" name="cel" required></td>
             </tr>
             <tr>
               <td>Correo Electr&oacutenico: <input type="text" name="correo" required></td>
             </tr>
         </table>
-    </fieldset>
-    <fieldset>
-        <legend>Procedencia :</legend>
+    <div class="button">Siguiente</div>
+    </fieldset> 
+    <fieldset class="section">
+           <h2 class="fs-title">Procedencia</h2>
         <table align="center">
               <tr>
-                <td>Escuela de Procedencia:<select name="Procedencia" required>
+                <td>Escuela de Procedencia:<br><select name="Procedencia" required>
                   <option value="default">Escoge una opci&oacuten</option>
                   <option value="1">CECyT #1 "Gonzalo V&aacutezquez Vela"</option>
                   <option value="2">CECyT #2 "Miguel Bernard"</option>
@@ -89,7 +105,7 @@
                 </td>
               </tr>
               <tr>
-                <td>Entidad Federativa de Procedencia:<select name="Estado" required>
+                <td>Entidad Federativa de Procedencia: <br><select name="Estado" required>
                   <option value="default">Escoge una opci&oacuten</option>
                   <option value="Agua">Aguascalientes</option>
                   <option value="Baja">Baja California</option>
@@ -151,9 +167,37 @@
                 <td><input type="radio" name="opcion" value="cuarta">Cuarta Opci&oacuten</td>
               </tr>
           </table>
-    </fieldset>
-    <br>
-    <center><input type="submit" value="Validacion"/>&nbsp;<input type="reset" value="Limpiar"/></center>
+          <p><input class="submit button" type="submit" value="Enviar"></p>
+  </fieldset>
+  <fieldset class="section">
+          <h3>Registro Exitoso!</h3>
+          <p style="color: black;">Tu registro se ha creado.</p>
+          <div class="button">Nuevo registro</div>
+  </fieldset>
 </form>
+</div>
+  </div>
 </body>
 </html>
+<script>
+  $(document).ready(function(){
+  $(".form-wrapper .button").click(function(){
+    var button = $(this);
+    var currentSection = button.parents(".section");
+    var currentSectionIndex = currentSection.index();
+    var headerSection = $('.steps li').eq(currentSectionIndex);
+    currentSection.removeClass("is-active").next().addClass("is-active");
+    headerSection.removeClass("is-active").next().addClass("is-active");
+
+    $(".form-wrapper").submit(function(e) {
+      e.preventDefault();
+    });
+
+    if(currentSectionIndex === 3){
+      $(document).find(".form-wrapper .section").first().addClass("is-active");
+      $(document).find(".steps li").first().addClass("is-active");
+    }
+  });
+});
+
+</script>
