@@ -19,7 +19,7 @@
         <li>Contacto</li>
         <li>Procedencia</li>
       </ul>
-      <form class="form-wrapper">
+      <form class="form-wrapper" method="POST" action="datos.php">
     <fieldset class="section is-active">      
     <h2>Identidad</h2>
         <table align="center">
@@ -169,11 +169,6 @@
           </table>
           <p><input class="submit button" type="submit" value="Enviar"></p>
   </fieldset>
-  <fieldset class="section">
-          <h3>Registro Exitoso!</h3>
-          <p style="color: black;">Tu registro se ha creado.</p>
-          <div class="button">Nuevo registro</div>
-  </fieldset>
 </form>
 </div>
   </div>
@@ -190,7 +185,7 @@
     headerSection.removeClass("is-active").next().addClass("is-active");
 
     $(".form-wrapper").submit(function(e) {
-      e.preventDefault();
+      window.location.href="datos.php";
     });
 
     if(currentSectionIndex === 3){

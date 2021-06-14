@@ -20,7 +20,7 @@ create table Contacto(
 	Calle varchar(250),
     Colonia varchar(100),
     CP varchar(10),
-    Celular int,
+    Celular int(10),
     Correo varchar(50),
     Boleta varchar(10)
 );
