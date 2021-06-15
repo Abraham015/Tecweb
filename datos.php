@@ -1,6 +1,5 @@
 <?php
 		session_start();
-
 		//Recolección de datos del formulario
 		$bol=$_REQUEST["boleta"];
 		$nom=$_REQUEST["nombre"];
@@ -101,93 +100,106 @@
 		$_SESSION["estado"]=$estado;
 		$_SESSION["promedio"]=$promedio;
 		$_SESSION["opcion"]=$opcion;
-
-		echo "<p align='center'><b><big>REGISTRO DE DATOS GENERALES<br>Alumnos de Nuevo Ingreso<br>(Agosto 2021)</big></b></p>";
-	    echo "<p><b><big>Porfavor, confirma tus datos</big></b></p>";
-
-	    echo "<fieldset>
-	      <legend>Identidad : </legend>
-	          <table align='center'>
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>.: Confirmacion de Datos :. </title>
+    <link rel="stylesheet" href="EstiloFormulario.css">
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1 align="center">Confirmaci&oacute;n de Datos Generales</h1>
+    <p>Alumnos de Nuevo Ingreso
+    <br>(Agosto 2021)</p>
+<div class="container">
+    <div class="wrapper">
+	    <fieldset class="section">
+	      <h2 style="color:white;">Identidad</h2>
+	          <table align="center" style="background: white;">
+            <tr>
+                <td><b>No. de boleta:</b></td>
+                <td><?php echo "<label>$bol</label>";?></td>
+            </tr>
+            <tr>
+                <td><b>Nombre(s):</b></td>
+                <td><?php echo "<label>$nom</label>";?></td>
+            </tr>
+            <tr>
+                <td><b>Apellido Paterno:</b></td>
+                <td><?php echo "<label>$apellido</label>";?></td>
+            </tr>
+            <tr>
+                <td><b>Apellido Materno:</b></td>
+                <td><?php echo "<label>$ape</label>";?></td>
+            </tr>
+            <tr>
+                <td><b>Fecha de nacimiento:</b></td>
+                <td><?php echo "<label>$fe</label>";?></td>
+            </tr>
+            <tr>
+                <td><b>G&eacute;nero:</b></td>
+                  <td><?php echo "<label>$gen</label>";?></td>
+            </tr>
+            <tr>
+                <td><b>CURP:</label></td>
+                <td><?php echo "<label>$curp</label>";?></td>
+            </tr>
+            </table>
+        </fieldset> 
+        <fieldset class="section">
+           <h2 style="color:white;">Contacto</h2>
+        <table align="center" style="background: white;">
 	            <tr>
-	                <td><label>No. de boleta:</label></td>
-	                <td><label>$bol</label></td>
+	              <td><b>Calle y N&uacutemero:</b></td>
+	              <td><?php echo "<label>$calle</label>";?></td>
 	            </tr>
 	            <tr>
-	                <td><label>Nombre(s):</label></td>
-	                <td><label>$nom</label></td>
+	              <td><b>Colonia:</b></td>
+	              <td><?php echo "<label>$colonia</label>";?></td> 
 	            </tr>
 	            <tr>
-	                <td><label>Apellido Paterno:</label></td>
-	                <td><label>$apellido</label></td>
+	              <td><b>C&oacutedigo Postal:</b></td>
+	              <td><?php echo "<label>$CP</label>";?></td> 
 	            </tr>
 	            <tr>
-	                <td><label>Apellido Materno:</label></td>
-	                <td><label>$ape</label></td>
+	              <td><b>Tel&eacutefono o celular:</b></td>
+	              <td><?php echo "<label>$cel</label>";?></td> 
 	            </tr>
 	            <tr>
-	                <td><label>Fecha de nacimiento:</label></td>
-	                <td><label>$fe</label></td>
-	            </tr>
-	            <tr>
-	                <td><label>G&eacute;nero:</label></td>
-	                  <td><label>$gen</label></td>
-	            </tr>
-	            <tr>
-	                <td><label>CURP:</label></td>
-	                <td><label>$curp</label></td>
-	            </tr>
-	            </table>
-	    </fieldset>";
-
-	    echo "<fieldset>
-	        <legend>Contacto :</legend>
-	        <table align='center'>
-	            <tr>
-	              <td>Calle y N&uacutemero:</td>
-	              <td><label>$calle</label></td>
-	            </tr>
-	            <tr>
-	              <td>Colonia: </td>
-	              <td><label>$colonia</label></td> 
-	            </tr>
-	            <tr>
-	              <td>C&oacutedigo Postal: </td>
-	              <td><label>$CP</label></td> 
-	            </tr>
-	            <tr>
-	              <td>Tel&eacutefono o celular: </td>
-	              <td><label>$cel</label></td> 
-	            </tr>
-	            <tr>
-	              <td>Correo Electr&oacutenico: </td>
-	              <td><label>$correo</label></td> 
+	              <td><b>Correo Electr&oacutenico:</b></td>
+	              <td><?php echo "<label>$correo</label>";?></td> 
 	            </tr>
 	        </table>
-	    </fieldset>";
-
-	    echo "<fieldset>
-	        <legend>Procedencia :</legend>
-	        <table align='center'>
+	    </fieldset>
+	    <fieldset class="section">
+	        <h2 style="color:white;">Procedencia :</h2>
+	        <table align="center" style="background: white;">
 	              <tr>
-	                <td>Escuela de Procedencia: </td>
-	                <td><label>$procedencia</label></td>
+	                <td><b>Escuela de Procedencia:</b></td>
+	                <td><?php echo "<label>$procedencia</label>";?></td>
 	              </tr>
 	              <tr>
-	                <td>Entidad Federativa de Procedencia: </td> 
-	                <td><label>$estado</label></td>
+	                <td><b>Entidad Federativa de Procedencia:</b></td> 
+	                <td><?php echo "<label>$estado</label>";?></td>
 	              </tr>
 	              <tr>
-	                <td>Promedio: </td>
-	                <td><label>$promedio</label></td>
+	                <td><b>Promedio:</b></td>
+	                <td><?php echo "<label>$promedio</label>";?></td>
 	              </tr>
 	              <tr>
-	                <td>ESCOM fue tu:</td>
-	                <td><label>$opcion</label></td>
+	                <td><b>ESCOM fue tu:</b></td>
+	                <td><?php echo "<label>$opcion</label>";?></td>
 	              </tr>
 	          </table>
-	    </fieldset>";
-
-	    echo "<big>¿Est&aacutes seguro que tus datos son correctos? Si es el caso, da clic en el botón registrar, en dado caso, da clic en el bot&oacuten regresar</big>";
-	    echo "<center><a href='confirmaciondatos.php'><input type='submit' value='Completar registro'/></a>&nbsp;<a href='registroalumno.html'><input type='button' value='Regresar'></a></center>";
-
-?>
+	    </fieldset>
+</form>
+</div>
+  </div>>
+	    <p>¿Est&aacutes seguro que tus datos son correctos? Si es el caso, da clic en el botón registrar, en dado caso, da clic en el bot&oacuten regresar</p>
+	    <center><a href='confirmaciondatos.php'><input type='submit' value='Completar registro'/></a>&nbsp;<a href='registroalumno.html'><input type='button' value='Regresar'></a></center>
+</body>
+</html>

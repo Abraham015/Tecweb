@@ -27,15 +27,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-</head>	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>.: Modificaci&oacute;n de Datos Generales:. </title>
+    <link rel="stylesheet" href="EstiloFormulario.css">
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
 <body>
-	<div class="container">
-		<div class="row">
-			<h3 style="text-align:center">MODIFICAR REGISTRO</h3>
-		</div>		
-		<form method="POST" action="update.php" autocomplete="off">
-			<fieldset>
-				<legend>Identidad : </legend>
+    <h1 align="center">Modificaci&oacute;n Datos Generales</h1>
+    <p>Alumnos de Nuevo Ingreso
+    <br>(Agosto 2021)</p>
+<div class="container">
+    <div class="wrapper">
+      <ul class="steps">
+        <li class="is-active">Identidad</li>
+        <li>Contacto</li>
+        <li>Procedencia</li>
+      </ul>
+      <form class="form-wrapper" method="POST" action="datos.php">
+    <fieldset class="section is-active">      
+    <h2>Identidad</h2>
         			<table align="center">
 			            <tr>
 			                <td><label for ="boleta">No. de boleta:</label></td>
@@ -67,9 +79,10 @@
 			                <td><input type="alphanumeric" name="curp" size="18" maxlength="18" value="<?php echo $row['CURP']; ?>" required /></td>
 			            </tr>
             		</table>
+            <div class="button">Siguiente</div>
 			</fieldset>
-			<fieldset>
-		        <legend>Contacto :</legend>
+			<fieldset class="section">
+		        <h2>Contacto :</h2>
 			        <table align="center">
 			            <tr>
 			              <td>Calle y N&uacutemero: <input type="text" name="calle" value="<?php echo $row1['Calle']; ?>" required></td>
@@ -78,18 +91,19 @@
 			              <td>Colonia: <input type="text" name="colonia" value="<?php echo $row1['Colonia']; ?>" required></td> 
 			            </tr>
 			            <tr>
-			              <td>C&oacutedigo Postal: <input type="number" name="CP" value="<?php echo $row1['CP']; ?>" required></td>
+			              <td>C&oacutedigo Postal:<br> <input type="number" name="CP" value="<?php echo $row1['CP']; ?>" required></td>
 			            </tr>
 			            <tr>
-			              <td>Tel&eacutefono o celular: <input type="number" name="cel" value="<?php echo $row1['Celular']; ?>" required></td>
+			              <td>Tel&eacutefono o celular:<br>  <input type="number" name="cel" value="<?php echo $row1['Celular']; ?>" required></td>
 			            </tr>
 			            <tr>
 			              <td>Correo Electr&oacutenico: <input type="text" name="correo" value="<?php echo $row1['Correo']; ?>" required></td>
 			            </tr>
 			        </table>
+			<div class="button">Siguiente</div>
     		</fieldset>
-    		<fieldset>
-		        <legend>Procedencia :</legend>
+    		<fieldset class="section">
+		        <h2>Procedencia :</h2>
 		        <table align="center">
 		            <tr>
 		            	<td>Escuela de Procedencia:<select name="Procedencia" required>
@@ -179,9 +193,28 @@
 		                <td><input type="radio" name="opcion" value="cuarta" <?php if($row2['opcion']=='Cuarta Opción') echo "checked=\"checked\" " ?> >Cuarta Opci&oacuten</td>
 		            </tr>
 		        </table>
+		        <a href="paginadedatos.php"><input type="button2" value="Regresar"></a><button type="submit">Guardar</button>
     		</fieldset>
-    		<a href="paginadedatos.php"><input type="button" value="Regresar"></a><button type="submit">Guardar</button>
 			</form>
 		</div>
 	</body>
 </html>
+<script>
+  $(document).ready(function(){
+  $(".form-wrapper .button").click(function(){
+    var button = $(this);
+    var currentSection = button.parents(".section");
+    var currentSectionIndex = currentSection.index();
+    var headerSection = $('.steps li').eq(currentSectionIndex);
+    currentSection.removeClass("is-active").next().addClass("is-active");
+    headerSection.removeClass("is-active").next().addClass("is-active");
+
+
+    if(currentSectionIndex === 3){
+      $(document).find(".form-wrapper .section").first().addClass("is-active");
+      $(document).find(".steps li").first().addClass("is-active");
+    }
+  });
+});
+
+</script>

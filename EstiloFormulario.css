@@ -168,7 +168,7 @@ fieldset{
   transform: scale(1, 1);
 }
 
-.form-wrapper .button, .form-wrapper .submit{
+.form-wrapper .button, .form-wrapper .submit,.form-wrapper .button3{
   background-color: navy;
   display: inline-block;
   padding: 8px 30px;
@@ -191,6 +191,7 @@ fieldset{
   -moz-appearance: none;
   appearance: none;
   left: 300 px;
+
 }
 
 .form-wrapper input[type="text"],
@@ -205,12 +206,9 @@ fieldset{
   font-size: 14px !important;
   font-family: 'Open Sans', sans-serif !important;
 }
-
-.form-wrapper input[type="radio"]{
-    display: table;
-    font-family: 'Open Sans', sans-serif !important;
+.form-wrapper input[type="radio"] {
+      margin-left: -70px;
 }
-
 .form-wrapper select,option{
     display: block;
   padding: 10px;
@@ -222,6 +220,20 @@ fieldset{
   font-size: 14px !important;
   font-family: 'Open Sans', sans-serif !important;
 }
+
+button,input[type="button2"]{
+  text-align: center;
+  background-color: navy;
+  display: inline-block;
+  padding: 8px 30px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px !important;
+  font-family: 'Open Sans', sans-serif !important;
+  position: relative;
+  border-radius: 10px;
+}
+
 
 
 

@@ -22,41 +22,41 @@
       <form class="form-wrapper" method="POST" action="datos.php">
     <fieldset class="section is-active">      
     <h2>Identidad</h2>
-        <table align="center">
+        <table align="center" >
             <tr>
-                <td><label for ="boleta">No. de boleta:</label></td>
+                <td align="right"><label for ="boleta">No. de boleta:</label></td>
                 <td><input type="number" id="boleta" name="boleta" size="10" maxlength="10" required/></td>
             </tr>
             <tr>
-                <td><label for ="nombre">Nombre(s):</label></td>
+                <td align="right"><label for ="nombre">Nombre(s):</label></td>
                 <td><input type="text" id="nombre" name="nombre" size="30" maxlength="30" required /></td>
             </tr>
             <tr>
-                <td><label for ="apaterno">Apellido Paterno:</label></td>
+                <td align="right"><label for ="apaterno">Apellido Paterno:</label></td>
                 <td><input type="text" id="apaterno" name="apaterno" size="30" maxlength="30" required /></td>
             </tr>
             <tr>
-                <td><label for ="amaterno">Apellido Materno:</label></td>
+                <td align="right"><label for ="amaterno">Apellido Materno:</label></td>
                 <td><input type="text" id="amaterno" name="amaterno"size="30" maxlength="30" required /></td>
             </tr>
             <tr>
-                <td><label for ="nacimiento">Fecha de nacimiento:</label></td>
+                <td align="right"><label for ="nacimiento">Fecha de nacimiento:</label></td>
                 <td><input type="date" name="fecha" size="10" maxlength="15" required /></td>
             </tr>
             <tr>
-                <td><label for ="genero">G&eacute;nero:</label></td>
-                  <td><input type="radio" name="mf" value="m" required> Masculino
-                  <input type="radio" name="mf" value="f" required> Femenino</td>
+                <td align="right"><label for ="genero">G&eacute;nero:</label></td>
+                  <td><input type="radio" name="mf" value="m" required>Masculino<br>
+                  <input type="radio" name="mf" value="f" required>Femenino</td>
             </tr>
             <tr>
-                <td><label for ="curp">CURP:</label></td>
+                <td align="right"><label for ="curp">CURP:</label></td>
                 <td><input type="alphanumeric" name="curp" size="18" maxlength="18" required /></td>
             </tr>
             </table>
             <div class="button">Siguiente</div>
     </fieldset> 
     <fieldset class="section">
-        <h2 class="fs-title">Contacto</h2>
+        <h2>Contacto</h2>
         <table align="center">
             <tr>
               <td>Calle y N&uacutemero: <input type="text" name="calle" required></td>
@@ -77,7 +77,7 @@
     <div class="button">Siguiente</div>
     </fieldset> 
     <fieldset class="section">
-           <h2 class="fs-title">Procedencia</h2>
+           <h2>Procedencia</h2>
         <table align="center">
               <tr>
                 <td>Escuela de Procedencia:<br><select name="Procedencia" required>
@@ -154,19 +154,14 @@
               <tr>
                 <td>ESCOM fue tu:</td>
               </tr>
-              <tr>
-                <td><input type="radio" name="opcion" value="primera">Primera Opci&oacuten</td>
-              </tr>
-              <tr>
-                <td><input type="radio" name="opcion" value="segunda">Segunda Opci&oacuten</td>
-              </tr>
-              <tr>
-                <td><input type="radio" name="opcion" value="tercera">Tercera Opci&oacuten</td>
-              </tr>
-              <tr>
-                <td><input type="radio" name="opcion" value="cuarta">Cuarta Opci&oacuten</td>
-              </tr>
-          </table>
+              </table><br><br>
+              <div align="center" style="position: absolute;top: 470px;left: 300px;margin: -25px 0 0 -25px;">
+                <label>Primera Opci&oacuten</label>&nbsp;&nbsp;<input type="radio" name="opcion" value="primera"><br>
+                <label>Segunda Opci&oacuten</label><input type="radio" name="opcion" value="segunda"><br>
+                <label>Tercera Opci&oacuten</label>&nbsp;&nbsp;<input type="radio" name="opcion" value="tercera"><br>
+                <label>Cuarta Opci&oacuten</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="opcion" value="cuarta"><br>
+              </div>
+          <br><br><br><br><br><br>
           <p><input class="submit button" type="submit" value="Enviar"></p>
   </fieldset>
 </form>
