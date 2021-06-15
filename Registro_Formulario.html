@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>.: Registro Alumnos :.</title>
+  </head>
+  <body>
+    <p align="center">
+      <h3>REGISTRO DE DATOS GENERALES</h3>
+      <h3>Alumnos de Nuevo Ingreso</h3>
+      <h3>(Agosto 2021)</h3>
+    </p>
+    <form
+      method="POST"
+      id="formulario"
+      name="formulario"
+    >
+      <fieldset>
+        <legend>Identidad :</legend>
+        <table align="center">
+          <tr>
+            <td><label for="boleta">No. de boleta:</label></td>
+            <td>
+              <input
+                type="text"
+                id="boleta"
+                name="boleta"
+                placeholder="Escribe tu No. de Boleta"
+                size="30"
+                maxlength="10"
+                required
+                
+              />
+            </td>
+            
+          </tr>
+
+          <tr>
+            <td><label for="nombre">Nombre(s):</label></td>
+            <td>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Escribe tu Nombre(s)"
+                size="30"
+                maxlength="30"
+                required
+                
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="apaterno">Apellido Paterno:</label></td>
+            <td>
+              <input
+                type="text"
+                id="apaterno"
+                name="apaterno"
+                placeholder="Escribe tu Ape.Paterno"
+                size="30"
+                maxlength="30"
+                required
+                
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="amaterno">Apellido Materno:</label></td>
+            <td>
+              <input
+                type="text"
+                id="amaterno"
+                name="amaterno"
+                placeholder="Escribe tu Ape.Materno"
+                size="30"
+                maxlength="30"
+                required
+                
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="nacimiento">Fecha de nacimiento:</label></td>
+            <td>
+              <input
+                type="date"
+                name="fecha"
+                id="fecha"
+                min="1900-01-01"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="genero">G&eacute;nero:</label></td>
+            <td>
+              <input type="radio" name="genero" value="m" required/> Masculino
+              <input type="radio" name="genero" value="f" /> Femenino
+            </td>
+          </tr>
+          <tr>
+            <td><label for="curp">CURP:</label></td>
+            <td>
+              <input
+                type="alphanumeric"
+                name="curp"
+                id="curp"
+                placeholder="Ingresa tu CURP "
+                size="18"
+                maxlength="18"
+                required
+              />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Contacto :</legend>
+        <table align="center">
+          <tr>
+            <td>
+              Calle y N&uacute;mero:
+              <input
+                type="text"
+                name="calle"
+                id="calle"
+                placeholder="Indica tu Calle y N&uacute;mero"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Colonia:
+              <input
+                type="text"
+                name="colonia"
+                id="colonia"
+                placeholder="Indica tu Colonia"
+                required
+                
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              C&oacutedigo Postal:
+              <input
+                type="text"
+                placeholder="Digita tu Codigo Postal"
+                name="CP"
+                id="CP"
+                maxlength="5"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Tel&eacute;fono o celular:
+              <input
+                type="text"
+                name="cel"
+                id="cel"
+                placeholder="55-55555555"
+                maxlength="10"
+                required
+                
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Correo Electr&oacute;nico:
+              <input
+                type="text"
+                name="correo"
+                id="correo"
+                placeholder="juan@correo.com"
+                required
+                
+              />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Procedencia :</legend>
+        <table align="center">
+          <tr>
+            <td>
+              Escuela de Procedencia:
+              <select name="Procedencia" required>
+                <option value="" selected disabled>Escoge una opci&oacuten</option>
+                <option value="1">CECyT #1 "Gonzalo V&aacutezquez Vela"</option>
+                <option value="2">CECyT #2 "Miguel Bernard"</option>
+                <option value="3">
+                  CECyT #3 "Estanislao Ram&iacuterez Ruiz"
+                </option>
+                <option value="4">CECyT #4 "L&aacutezaro Cardenas"</option>
+                <option value="5">
+                  CECyT #5 "Benito Ju&aacuterez Garc&iacutea"
+                </option>
+                <option value="6">
+                  CECyT #6 "Miguel Oht&oacuten de Mendizabal"
+                </option>
+                <option value="7">CECyT #7 "Cuauht&eacutemoc"</option>
+                <option value="8">
+                  CECyT #8 "Narciso Bassols Garc&iacutea"
+                </option>
+                <option value="9">CECyT #9 "Juan de Dios B&aacutetiz"</option>
+                <option value="10">
+                  CECyT #10 "Carlos Vallejo M&aacuterquez"
+                </option>
+                <option value="11">
+                  CECyT #11 "Wilfrido Massieu P&eacuterez"
+                </option>
+                <option value="12">
+                  CECyT #12 "Jos&eacute Mar&iacutea Morelos y Pav&oacuten"
+                </option>
+                <option value="13">
+                  CECyT #13 "Ricardo Flores Mag&oacuten"
+                </option>
+                <option value="14">CECyT #14 "Luis Enrique Erro"</option>
+                <option value="15">
+                  CECyT #15 "Di&oacutedoro Ant&uacutenez Echegaray"
+                </option>
+                <option value="16">CECyT #16 "Hidalgo"</option>
+                <option value="17">CECyT #17 "Le&oacuten-Guanajuato"</option>
+                <option value="18">CECyT #18 "Zacatecas"</option>
+                <option value="C1">CET #1 "Walter Cross Buchanan"</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Entidad Federativa de Procedencia:
+              <select name="Estado" required>
+                <option value="" disabled selected>Escoge una opci&oacuten</option>
+                <option value="Agua">Aguascalientes</option>
+                <option value="Baja">Baja California</option>
+                <option value="BajaS">Baja California Sur</option>
+                <option value="Cam">Campeche</option>
+                <option value="Coa">Coahuila</option>
+                <option value="Col">Colima</option>
+                <option value="Chia">Chiapas</option>
+                <option value="Chi">Chihuahua</option>
+                <option value="DF">Ciudad de M&eacutexico</option>
+                <option value="Du">Durango</option>
+                <option value="EM">Estado de M&eacutexico</option>
+                <option value="Gua">Guanajuato</option>
+                <option value="Gue">Guerrero</option>
+                <option value="Hid">Hidalgo</option>
+                <option value="Ja">Jalisco</option>
+                <option value="Mich">Michoac&aacuten</option>
+                <option value="Mor">Morelos</option>
+                <option value="Nay">Nayarit</option>
+                <option value="NL">Nuevo L&eacuteon</option>
+                <option value="Oa">Oaxaca</option>
+                <option value="Pue">Puebla</option>
+                <option value="Q">Quer&eacutetaro</option>
+                <option value="QR">Quitana Roo</option>
+                <option value="SL">San Luis Potos&iacute</option>
+                <option value="Sina">Sinaloa</option>
+                <option value="Sono">Sonora</option>
+                <option value="Tab">Tabasco</option>
+                <option value="Tam">Tamaulipas</option>
+                <option value="Tlax">Tlaxcala</option>
+                <option value="Ver">Veracruz</option>
+                <option value="Yu">Yucat&aacuten</option>
+                <option value="Zac">Zacatecas</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              En caso de que no vengas de un CECyT, escribe el nombre de tu
+              escuela:
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Nombre de la escuela:
+              <input
+                type="text"
+                id="escuela"
+                name="escuela"
+                placeholder="Registra tu Escuela"
+                
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Promedio:
+              <input
+                type="number"
+                name="promedio"
+                id="promedio"
+                placeholder="Digita tu Promedio"
+                min="6"
+                step="0.01"
+                max="10"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>ESCOM fue tu:</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="opcion" value="primera" required />Primera
+              Opci&oacuten
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="opcion" value="segunda" />Segunda
+              Opci&oacuten
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="opcion" value="tercera" />Tercera
+              Opci&oacuten
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="opcion" value="cuarta" />Cuarta
+              Opci&oacuten
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br />
+      <center>
+        <input type="submit" value="Enviar" />&nbsp;<input
+          type="reset"
+          value="Limpiar"
+        />
+      </center>
+    </form>
+    <script src="Validaciones.js" type="text/javascript"></script>
+  </body>
+</html>
