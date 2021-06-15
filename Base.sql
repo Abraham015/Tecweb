@@ -20,7 +20,7 @@ create table Contacto(
 	Calle varchar(250),
     Colonia varchar(100),
     CP varchar(10),
-    Celular int(10),
+    Celular varchar(11),
     Correo varchar(50),
     Boleta varchar(10)
 );
@@ -28,7 +28,7 @@ create table Contacto(
 create table Procedencia(
 	Escuela varchar(400),
     Entidad varchar(30),
-    Promedio int,
+    Promedio double,
     opcion varchar(15),
     Boleta varchar(10)
 );

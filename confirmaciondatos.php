@@ -1,6 +1,5 @@
 <?php
     session_start();
-
     //Declaración de la clase FPDF
      include("./fpdf183/fpdf.php");
     
@@ -321,7 +320,7 @@
     $pdf->Cell(0,10,'Promedio: '.$promedio.'',0,1);
     $pdf->Cell(0,10,'Numero de opcion: '.utf8_decode($opcion).'',0,1);*/
 
-    $pdf->Output('F', 'C:/wamp64/www/Proyecto/ficha.pdf');
+    $pdf->Output('F', 'C:\wamp64\www\Tecweb\ficha.pdf');
 
 
     //Se le preguntará al usuario si quiere o no que se le mande su PDF a su correo

@@ -27,7 +27,7 @@
 	//Whether to use SMTP authentication
 	$mail->SMTPAuth = true;
 	//Username to use for SMTP authentication - use full email address for gmail
-	$mail->Username = "abraham.hdez.aha@gmail.com";
+	$mail->Username = "rodri.mtz.v@gmail.com";
 	//Password to use for SMTP authentication
 	$mail->Password = "Abisavengers015";
 	//Set who the message is to be sent from
