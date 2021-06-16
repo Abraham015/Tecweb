@@ -1,0 +1,73 @@
+.datos{
+	background-image:url(images/wef-min);  
+	background-position: center;
+	background-attachment: fixed; 
+	background-size:cover;
+}
+
+#tabla-container{
+		margin:150px auto;
+		width: 600px;
+		position: absolute;
+		top:50%;
+		left: 40%;
+		transform: translate(-47.5%,-95%);
+}
+
+table{
+	background-color: white;
+	text-align: center;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td{
+	padding: 20px;
+}
+
+img{
+	width: 45px;
+	height: 45px;
+}
+
+.modificar{
+	background-size: 100%,100%;
+	border:none;
+	cursor: pointer;
+	padding: 5px 15px;
+}
+
+thead{
+	background-color: #246355;
+	border-bottom: 5px solid #0F362D;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: #DDD;
+}
+
+tr:hover{
+	background-color: #369681;
+	color: white;
+}
+
+.botones{
+	width: 300px;
+	height: 50px;
+	display: block;
+	margin: auto;
+	margin-top: 0px;
+	color: white;
+	background: #952F57;
+	border-style: none;
+	outline: 0px;
+	border-radius: 50px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+a{
+	text-decoration: none;
+}
