@@ -47,7 +47,7 @@
     $row2 = $resultado2->fetch_assoc();
 
     $resultado3=$conn->query( "SELECT * FROM examen WHERE Boleta = '$bol'");
-    $row3 = $resultado3->fetch_assoc();
+    $row3=mysqli_query($conn,$resultado3);
 
     //Se obtendrán de los row las variable
     $bol=$row['Boleta'];

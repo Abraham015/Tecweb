@@ -192,7 +192,7 @@ const validarEscuela = () => {
   // Realizar la(s) validación(es) pertinente(s).
   if (!expresionesRegulares.escuela.test(textoEscuela)) {
     // Si es inválido, regresamos el mensaje de error.
-    return "La escuela es inválida";
+    //return "La escuela es inválida";
   }
 };
 
@@ -289,3 +289,4 @@ const formulario = document.getElementById("formulario");
 
 // Añadimos el evento de escucha para cuando se "envíe".
 formulario.addEventListener("submit", validarCampos);
+formulario.addEventListener("button", validarCampos);

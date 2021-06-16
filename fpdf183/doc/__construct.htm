@@ -8,55 +8,61 @@
 <body>
 <h1>__construct</h1>
 <code>__construct([<b>string</b> orientation [, <b>string</b> unit [, <b>mixed</b> size]]])</code>
-<h2>Descripción</h2>
-Esta es la clase constructor. Permite establecer el formato de página, la orientación y la unidad de medida usada en todos los métodos (excepto para tamaños de fuentes).
-<h2>Parámetros</h2>
+<h2>Description</h2>
+Il s'agit du constructeur de la classe. Il permet de fixer le format des pages, leur
+orientation par défaut ainsi que l'unité de mesure utilisée dans toutes les méthodes (sauf
+pour les tailles de police).
+<h2>Paramètres</h2>
 <dl class="param">
 <dt><code>orientation</code></dt>
 <dd>
-Orientación de página por defecto. Los posibles valores son (indiferente a mayúsculas):
+Orientation des pages par défaut. Les valeurs possibles sont (indépendamment de la casse) :
 <ul>
-<li><code>P</code> o <code>Portrait</code> (normal)
-<li><code>L</code> o <code>Landscape</code> (apaisado)
+<li><code>P</code> ou <code>Portrait</code></li>
+<li><code>L</code> ou <code>Landscape</code></li>
 </ul>
-Valor por defecto es <code>P</code>.
+La valeur par défaut est <code>P</code>.
 </dd>
 <dt><code>unit</code></dt>
 <dd>
-Unidad de medida de usuario. Los posibles valores son:
+Unité de mesure utilisateur. Les valeurs possibles sont :
 <ul>
-<li><code>pt</code>: punto
-<li><code>mm</code>: milimetro
-<li><code>cm</code>: centimetro
-<li><code>in</code>: pulgada
+<li><code>pt</code> : point</li>
+<li><code>mm</code> : millimètre</li>
+<li><code>cm</code> : centimètre</li>
+<li><code>in</code> : pouce</li>
 </ul>
-Un punto es igual a 1/72 de pulgada, es decir cerca de 0.35 mm (siendo una pulgada 2.54 cm). Esta es una unidad muy común en tipografía; los tamaños de fuentes son expresados en esa unidad.
+Un point est égal à 1/72ème de pouce, c'est-à-dire environ 0,35 millimètre. C'est une unité
+très courante en typographie; les tailles de police sont exprimées dans cette unité.
+<br>
+Un pouce vaut 2,54 centimètres.
 <br>
 <br>
-Valor por defecto es <code>mm</code>.
+La valeur par défaut est <code>mm</code>.
 </dd>
 <dt><code>size</code></dt>
 <dd>
-El formato usado por las páginas. Es puede ser uno de los siguientes valores (indiferente a mayúsculas):
+Le format utilisé pour les pages. Il peut s'agir d'une des valeurs ci-dessous (indépendamment
+de la casse) :
 <ul>
-<li><code>A3</code>
-<li><code>A4</code>
-<li><code>A5</code>
-<li><code>Letter</code>
-<li><code>Legal</code>
+<li><code>A3</code></li>
+<li><code>A4</code></li>
+<li><code>A5</code></li>
+<li><code>Letter</code></li>
+<li><code>Legal</code></li>
 </ul>
-o un formato personalizado en la forma de un array de dos elementos conteniendo el ancho y el alto (expresado en la unidad dada por <code>unit</code>).
+ou bien d'un tableau contenant la largeur et la hauteur (exprimées dans l'unité donnée par
+<code>unit</code>).<br>
 <br>
-<br>
-Valor por defecto es <code>A4</code>.
+La valeur par défaut est <code>A4</code>.
 </dd>
 </dl>
-<h2>Ejemplo</h2>
-Ejemplo con un formato de página personalizado en 100x150 mm:
+<h2>Exemple</h2>
+Exemple avec un format personnalisé de 100x150 mm :
 <div class="doc-source">
 <pre><code>$pdf = new FPDF('P','mm',array(100,150));</code></pre>
 </div>
 <hr style="margin-top:1.5em">
-<div style="text-align:center"><a href="index.htm">Inicio</a></div>
+<div style="text-align:center"><a href="index.htm">Index</a></div>
 </body>
 </html>
