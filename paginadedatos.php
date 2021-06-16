@@ -26,6 +26,12 @@
 		</thead>
 		<thead>
 			<tr>
+				<th colspan="4" align="center"><a href="registroalumno.html"><button class="botones">Crear nuevo registro</button></a></th>
+				<th colspan="4" align="center"><a href="cerrarsesion.php"><button class="botones">Cerrar Sesión</button></th>
+			</tr>
+		</thead>
+		<thead>
+			<tr>
 				<th>Boleta</th>
 				<th>Nombre</th>
 				<th>Apellido Paterno</th>
@@ -37,8 +43,10 @@
 			</tr>
 		</thead>
 		<?php
-			$sql="SELECT Boleta,Nombre,AP,AM FROM identidad";
+			$sql="SELECT Boleta,Nombre,AP,AM,horario FROM identidad, examen WHERE identidad.Boleta=examen.Boletaex";
 			$result=mysqli_query($conn,$sql);
+			/*$sql2="SELECT horario FROM examen";
+			$result2=mysqli_query($conn,$sql2);*/
 			while($mostrar=mysqli_fetch_array($result)) {
 		?>
 		<tr>
@@ -46,17 +54,11 @@
 			<td><?php echo $mostrar['Nombre'] ?></td>
 			<td><?php echo $mostrar['AP'] ?></td>
 			<td><?php echo $mostrar['AM'] ?></td>
-			<td></td>
+			<td><?php echo $mostrar['horario'] ?></td>
 			<td><a href="modificar.php?Boleta=<?php echo $mostrar['Boleta']; ?>"><button class="modificar"/><img src="images/lapiz.png"></button></a></td>
 			<td><a href="Recuperarpdf.php?Boleta=<?php echo $mostrar['Boleta']; ?>"><button class="modificar"/><img src="images/pdf.png"></button></a></td>
 			<td><a href="eliminar.php?Boleta=<?php echo $mostrar['Boleta']; ?>"><button class="modificar"/><img src="images/basura.png"></button></a></td>
 		</tr>
-		<thead>
-			<tr>
-				<th colspan="4" align="center"><a href="registroalumno.html"><button class="botones">Crear nuevo registro</button></a></th>
-				<th colspan="4" align="center"><a href="cerrarsesion.php"><button class="botones">Cerrar Sesión</button></th>
-			</tr>
-		</thead>
 		<?php } ?>
 	</table>
 </div>

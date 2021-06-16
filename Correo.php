@@ -1,6 +1,6 @@
 <?php
 	
-	$nc=$_POST["correo"];
+	$nc=$_GET["Correo"];
 
 	date_default_timezone_set('Etc/UTC');
 	include("./send/PHPMailer.php");
@@ -27,15 +27,15 @@
 	//Whether to use SMTP authentication
 	$mail->SMTPAuth = true;
 	//Username to use for SMTP authentication - use full email address for gmail
-	$mail->Username = "rodri.mtz.v@gmail.com";
+	$mail->Username = "escom2021web@gmail.com";
 	//Password to use for SMTP authentication
-	$mail->Password = "Abisavengers015";
+	$mail->Password = "ESCOMADMIN2021";
 	//Set who the message is to be sent from
-	$mail->setFrom('abraham.hdez.aha@gmail.com', 'Abraham');
+	$mail->setFrom('escom2021web@gmail.com', 'Equipo 1 Grupo 2CM14');
 	//Set an alternative reply-to address
 	//$mail->addReplyTo('replyto@example.com', 'First Last');
 	//Set who the message is to be sent to
-	$mail->addAddress($nc, 'Abraham H');
+	$mail->addAddress($nc, 'Alumnos de Nuevo Ingreso');
 	//Set the subject line
 	$mail->Subject = 'PDF del registro de alumnos 2021';
 	//Read an HTML message body from an external file, convert referenced images to embedded,

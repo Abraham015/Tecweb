@@ -16,7 +16,7 @@
         // Pie de página
         function Footer()
         {
-            $this->Image('./images/pie.png',22.5,255,175);
+            $this->Image('./images/pie.png',22.5,300,175);
             $this->Ln(100);
         }
     }
@@ -54,126 +54,128 @@
     }
 
     $identidad = "INSERT INTO identidad (Boleta,Nombre,AP,AM,fecha,Genero,CURP)
-    VALUES ($bol,'$nom','$apellido','$ape','$fe','$gen','$curp')";
+    VALUES ('$bol','$nom','$apellido','$ape','$fe','$gen','$curp')";
 
     $contacto="INSERT INTO Contacto (Calle,Colonia,CP,Celular,Correo,Boleta)
-    VALUES ('$calle','$colonia',$CP,'$cel','$correo',$bol)";
+    VALUES ('$calle','$colonia',$CP,'$cel','$correo','$bol')";
 
     $pro="INSERT INTO Procedencia (Escuela,Entidad,Promedio,opcion,Boleta)
-    VALUES ('$procedencia','$estado',$promedio,'$opcion',$bol)";
+    VALUES ('$procedencia','$estado',$promedio,'$opcion','$bol')";
 
 
     $resultado = $conn->query( "SELECT * FROM examen");
     $row = $resultado->fetch_assoc();
 
-    if($row==0){
-        $row=1;
+    $index=$row['Num'];
+
+    if($index==0){
+        $index=1;
         $horario="Lunes 3 de Agosto del 2021, 8:30";
         $lab="Laboratorio 1";
-        $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
+        $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
     }else{
-        if($row==1&&$row<=150){
-            if ($row==1&&$row<26) {
-                $row=$row+1;
+        if($index==1&&$index<=150){
+            if ($index==1&&$index<26) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 8:30 am";
                 $lab="Laboratorio 1";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
-            }elseif ($row==26&&$row<51) {
-                $row=$row+1;
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+            }elseif ($index==26&&$index<51) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 8:30 am";
                 $lab="Laboratorio 2";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
-            }elseif ($row==51&&$row<76) {
-                $row=$row+1;
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+            }elseif ($index==51&&$$index<76) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 8:30 am";
                 $lab="Laboratorio 3";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
-            }elseif ($row==76&&$row<101) {
-                $row=$row+1;
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+            }elseif ($index==76&&$index<101) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 8:30 am";
                 $lab="Laboratorio 4";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
-            }elseif ($row==101&&$row<126) {
-                $row=$row+1;
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+            }elseif ($index==101&&$index<126) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 8:30 am";
                 $lab="Laboratorio 5";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
-            }elseif ($row==126&&$row<151) {
-                $row=$row+1;
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+            }elseif ($index==126&&$index<151) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 8:30 am";
                 $lab="Laboratorio 6";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
             }
-        }elseif ($row==151&&$row<=300){
-            if ($row==151&&$row<176) {
-                $row=$row+1;
+        }elseif ($index==151&&$index<=300){
+            if ($index==151&&$index<176) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 9:45 am";
                 $lab="Laboratorio 1";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
-            }elseif ($row==176&&$row<201) {
-                $row=$row+1;
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+            }elseif ($index==176&&$index<201) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 9:45 am";
                 $lab="Laboratorio 2";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
-            }elseif ($row==201&&$row<226) {
-                $row=$row+1;
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+            }elseif ($index==201&&$index<226) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 9:45 am";
                 $lab="Laboratorio 3";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
-            }elseif ($row==226&&$row<251) {
-                $row=$row+1;
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+            }elseif ($index==226&&$index<251) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 9:45 am";
                 $lab="Laboratorio 4";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
-            }elseif ($row==251&&$row<276) {
-                $row=$row+1;
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+            }elseif ($index==251&&$index<276) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 9:45 am";
                 $lab="Laboratorio 5";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
-            }elseif ($row==276&&$row<301) {
-                $row=$row+1;
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+            }elseif ($index==276&&$index<301) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 9:45 am";
                 $lab="Laboratorio 6";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
             }
-        }elseif ($row==301&&$row<=450) {
-            if ($row==301&&$row<326) {
-                $row=$row+1;
+        }elseif ($index==301&&$index<=450) {
+            if ($index==301&&$index<326) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 10:40 am";
                 $lab="Laboratorio 1";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
-            }elseif ($row==326&&$row<351) {
-                $row=$row+1;
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+            }elseif ($index==326&&$index<351) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 10:40 am";
                 $lab="Laboratorio 2";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
-            }elseif ($row==351&&$row<376) {
-                $row=$row+1;
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+            }elseif ($index==351&&$index<376) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 10:40 am";
                 $lab="Laboratorio 3";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
-            }elseif ($row==376&&$row<401) {
-                $row=$row+1;
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+            }elseif ($index==376&&$index<401) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 10:40 am";
                 $lab="Laboratorio 4";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
-            }elseif ($row==401&&$row<426) {
-                $row=$row+1;
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+            }elseif ($index==401&&$index<426) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 10:40 am";
                 $lab="Laboratorio 5";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
-            }elseif ($row==426&&$row<451) {
-                $row=$row+1;
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+            }elseif ($index==426&&$index<451) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 10:40 am";
                 $lab="Laboratorio 6";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
             }
         }else{
-            if ($row>=451) {
-                $row=$row+1;
+            if ($index>=451) {
+                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 10:40 am";
                 $lab="Laboratorio 1";
-                $turno = "INSERT INTO examen (Num,horario,laboratorio) VALUES ($row,'$horario','$lab')";
+                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
             }
         }
     }
@@ -207,7 +209,7 @@
     $pdf->AliasNbPages();
     $pdf->AddPage('P','Legal');
     $pdf->SetFont('Helvetica','',12);
-    $pdf->Image('./images/Encabezado1.png',70,40,75);
+    $pdf->Image('./images/Encabezado1.png',70,42.5,75);
 
     /*........................Primera Tabla......................................................................*/
 
@@ -216,7 +218,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,62.5);
+    $pdf->SetXY(45,67.5);
     $pdf->Cell(60, 5, utf8_decode ('Boleta: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -227,7 +229,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,67.5);
+    $pdf->SetXY(45,72.5);
     $pdf->Cell(60, 5, utf8_decode ('Nombre: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -239,7 +241,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,72.5);
+    $pdf->SetXY(45,77.5);
     $pdf->Cell(60, 5, utf8_decode ('Apellido Paterno'), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -253,7 +255,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,77.5);
+    $pdf->SetXY(45,82.5);
     $pdf->Cell(60, 5, utf8_decode ('Apellido Materno'), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -266,7 +268,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,82.5);
+    $pdf->SetXY(45,87.5);
     $pdf->Cell(60, 5, utf8_decode ('Fecha de Nacimiento'), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -279,7 +281,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,87.5);
+    $pdf->SetXY(45,92.5);
     $pdf->Cell(60, 5, utf8_decode ('Género'), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -292,7 +294,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,92.5);
+    $pdf->SetXY(45,97.5);
     $pdf->Cell(60, 5, utf8_decode ('CURP'), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -302,14 +304,14 @@
 
     /*........................Segunda Tabla......................................................................*/
 
-    $pdf->Image('./images/Encabezado2.png',70,102.5,75);
+    $pdf->Image('./images/Encabezado2.png',70,115.5,75);
 
     $pdf->Cell(40, 60,'', 10,8, 'C');
     $pdf->Ln(5);
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,125);
+    $pdf->SetXY(45,142.5);
     $pdf->Cell(60, 5, utf8_decode ('Calle y Número: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -322,7 +324,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,130);
+    $pdf->SetXY(45,147.5);
     $pdf->Cell(60, 5, utf8_decode ('Colonia: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -335,7 +337,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,135);
+    $pdf->SetXY(45,152.5);
     $pdf->Cell(60, 5, utf8_decode ('Código Postal: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -348,7 +350,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,140);
+    $pdf->SetXY(45,157.5);
     $pdf->Cell(60, 5, utf8_decode ('Teléfono o celular: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -361,7 +363,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,145);
+    $pdf->SetXY(45,162.5);
     $pdf->Cell(60, 5, utf8_decode ('Correo Electronico: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -372,14 +374,14 @@
     /*........................Tercera Tabla......................................................................*/
 
 
-    $pdf->Image('./images/Encabezado3.png',70,155,75);
+    $pdf->Image('./images/Encabezado3.png',70,180.5,75);
 
     $pdf->Cell(40, 60,'', 10,8, 'C');
     $pdf->Ln(5);
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,177.5);
+    $pdf->SetXY(45,205.5);
     $pdf->Cell(60, 5, utf8_decode ('Escuela de procedencia: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -392,7 +394,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,182.5);
+    $pdf->SetXY(45,210.5);
     $pdf->Cell(60, 5, utf8_decode ('Entidad Federativa de procedencia: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -405,7 +407,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,187.5);
+    $pdf->SetXY(45,215.5);
     $pdf->Cell(60, 5, utf8_decode ('Promedio: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -418,7 +420,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,192.5);
+    $pdf->SetXY(45,220.5);
     $pdf->Cell(60, 5, utf8_decode ('ESCOM fue: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -426,17 +428,17 @@
     $pdf->SetTextColor(3,3,3); //Letra color negro
     $pdf->Cell(60, 5,utf8_decode ($opcion), 1,0,'C','R');
 
- /*........................Tercera Tabla......................................................................*/
+ /*........................Cuarta Tabla......................................................................*/
 
 
-    $pdf->Image('./images/Encabezado4.png',70,202.5,75);
+    $pdf->Image('./images/Encabezado4.png',70,237.5,75);
 
     $pdf->Cell(40, 60,'', 10,8, 'C');
     $pdf->Ln(5);
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,224.5);
+    $pdf->SetXY(45,262.5);
     $pdf->Cell(60, 5, utf8_decode ('Horario de aplicación: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -449,7 +451,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,229.5);
+    $pdf->SetXY(45,267.5);
     $pdf->Cell(60, 5, utf8_decode ('Laboratorio: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -500,7 +502,7 @@
     echo "<p align='center'><object  data='ficha.pdf'></p></object>";   ?>
     <p align='center'>En la parte superior se puede encontrar una imagen previa de como resulto el PDF con tus datos, si quieres visualizarlo mejor da click en el boton de abajo</p>;
     <center><a href='ficha.pdf'><input type='button' value='Ver PDF'></a></center>;
-    <p align='center'>Si quieres mandar tu PDF por correo, porfavor da click en el boton 'Enviar PDF', de caso contrario, puedes regresar a la página principal</p>;
-    <center><a href='Casa.html'><input type='submit' value='Volver al inicio'/></a>&nbsp;<a href='Correo.html'><input type='button' value='Enviar PDF'></a></center>;
+    <p align='center'>Gracias por haber colocado tus datos correctamente, si tienes alguna duda, acude con un asesor</p>;
+    <center><a href='Correo.php?Correo=<?php echo $correo; ?>'><input type='button' value='Salir del registro'></a></center>;
 </body>
 </html>

@@ -16,7 +16,7 @@
         // Pie de página
         function Footer()
         {
-            $this->Image('./images/pie.png',22.5,230,175);
+            $this->Image('./images/pie.png',22.5,300,175);
             $this->Ln(100);
         }
     }
@@ -46,6 +46,9 @@
     $resultado2=$conn->query( "SELECT * FROM Procedencia WHERE Boleta = '$bol'");
     $row2 = $resultado2->fetch_assoc();
 
+    $resultado3=$conn->query( "SELECT * FROM examen WHERE Boleta = '$bol'");
+    $row3 = $resultado3->fetch_assoc();
+
     //Se obtendrán de los row las variable
     $bol=$row['Boleta'];
     $nom= $row['Nombre'];
@@ -63,13 +66,15 @@
     $estado=$row2['Entidad'];
     $promedio=$row2['Promedio'];
     $opcion=$row2['opcion'];
+    $horario=$row3['horario'];
+    $lab=$row3['laboratorio'];
 
     //Tomaremos las variables que se tienen
     $pdf = new PDF();
     $pdf->AliasNbPages();
-    $pdf->AddPage('P','letter');
+    $pdf->AddPage('P','Legal');
     $pdf->SetFont('Helvetica','',12);
-    $pdf->Image('./images/Encabezado1.png',70,50,75);
+    $pdf->Image('./images/Encabezado1.png',70,42.5,75);
 
     /*........................Primera Tabla......................................................................*/
 
@@ -78,7 +83,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,72.5);
+    $pdf->SetXY(45,67.5);
     $pdf->Cell(60, 5, utf8_decode ('Boleta: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -89,7 +94,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,77.5);
+    $pdf->SetXY(45,72.5);
     $pdf->Cell(60, 5, utf8_decode ('Nombre: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -101,7 +106,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,82.5);
+    $pdf->SetXY(45,77.5);
     $pdf->Cell(60, 5, utf8_decode ('Apellido Paterno'), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -115,7 +120,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,87.5);
+    $pdf->SetXY(45,82.5);
     $pdf->Cell(60, 5, utf8_decode ('Apellido Materno'), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -128,7 +133,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,92.5);
+    $pdf->SetXY(45,87.5);
     $pdf->Cell(60, 5, utf8_decode ('Fecha de Nacimiento'), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -141,7 +146,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,97.5);
+    $pdf->SetXY(45,92.5);
     $pdf->Cell(60, 5, utf8_decode ('Género'), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -154,7 +159,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,102.5);
+    $pdf->SetXY(45,97.5);
     $pdf->Cell(60, 5, utf8_decode ('CURP'), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -164,14 +169,14 @@
 
     /*........................Segunda Tabla......................................................................*/
 
-    $pdf->Image('./images/Encabezado2.png',70,112.5,75);
+    $pdf->Image('./images/Encabezado2.png',70,115.5,75);
 
     $pdf->Cell(40, 60,'', 10,8, 'C');
     $pdf->Ln(5);
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,135);
+    $pdf->SetXY(45,142.5);
     $pdf->Cell(60, 5, utf8_decode ('Calle y Número: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -184,7 +189,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,140);
+    $pdf->SetXY(45,147.5);
     $pdf->Cell(60, 5, utf8_decode ('Colonia: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -197,7 +202,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,145);
+    $pdf->SetXY(45,152.5);
     $pdf->Cell(60, 5, utf8_decode ('Código Postal: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -210,7 +215,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,150);
+    $pdf->SetXY(45,157.5);
     $pdf->Cell(60, 5, utf8_decode ('Teléfono o celular: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -223,7 +228,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,155);
+    $pdf->SetXY(45,162.5);
     $pdf->Cell(60, 5, utf8_decode ('Correo Electronico: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -234,14 +239,14 @@
     /*........................Tercera Tabla......................................................................*/
 
 
-    $pdf->Image('./images/Encabezado3.png',70,165,75);
+    $pdf->Image('./images/Encabezado3.png',70,180.5,75);
 
     $pdf->Cell(40, 60,'', 10,8, 'C');
     $pdf->Ln(5);
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,187.5);
+    $pdf->SetXY(45,205.5);
     $pdf->Cell(60, 5, utf8_decode ('Escuela de procedencia: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -254,7 +259,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,192.5);
+    $pdf->SetXY(45,210.5);
     $pdf->Cell(60, 5, utf8_decode ('Entidad Federativa de procedencia: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -267,7 +272,7 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,197.5);
+    $pdf->SetXY(45,215.5);
     $pdf->Cell(60, 5, utf8_decode ('Promedio: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
@@ -280,13 +285,44 @@
     $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
     $pdf->SetTextColor(255,255,255); //Letra color blanco
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetXY(45,202.5);
+    $pdf->SetXY(45,220.5);
     $pdf->Cell(60, 5, utf8_decode ('ESCOM fue: '), 1,0,'C','R');
     $pdf->SetFont('Arial', '', 9);
 
     $pdf->SetFillColor(255,255,255);//Fondo verde de celda
     $pdf->SetTextColor(3,3,3); //Letra color negro
     $pdf->Cell(60, 5,utf8_decode ($opcion), 1,0,'C','R');
+
+ /*........................Cuarta Tabla......................................................................*/
+
+
+    $pdf->Image('./images/Encabezado4.png',70,237.5,75);
+
+    $pdf->Cell(40, 60,'', 10,8, 'C');
+    $pdf->Ln(5);
+    $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
+    $pdf->SetTextColor(255,255,255); //Letra color blanco
+    $pdf->SetFont('Arial', 'B', 9);
+    $pdf->SetXY(45,262.5);
+    $pdf->Cell(60, 5, utf8_decode ('Horario de aplicación: '), 1,0,'C','R');
+    $pdf->SetFont('Arial', '', 9);
+
+    $pdf->SetFillColor(255,255,255);//Fondo verde de celda
+    $pdf->SetTextColor(3,3,3); //Letra color negro
+    $pdf->Cell(60, 5,$horario, 1,0,'C','R');
+
+    $pdf->Cell(40, 60,'', 10,8, 'C');
+    //$pdf->Ln(5);
+    $pdf->SetFillColor(149,47,87);//Fondo guinda de celda
+    $pdf->SetTextColor(255,255,255); //Letra color blanco
+    $pdf->SetFont('Arial', 'B', 9);
+    $pdf->SetXY(45,267.5);
+    $pdf->Cell(60, 5, utf8_decode ('Laboratorio: '), 1,0,'C','R');
+    $pdf->SetFont('Arial', '', 9);
+
+    $pdf->SetFillColor(255,255,255);//Fondo verde de celda
+    $pdf->SetTextColor(3,3,3); //Letra color negro
+    $pdf->Cell(60, 5,$lab, 1,0,'C','R');
 
     $pdf->Output('F', 'C:\wamp64\www\Proyecto\ficha.pdf'); 
 ?>
