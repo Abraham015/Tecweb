@@ -5,77 +5,77 @@ class PDF extends FPDF
 {
 function Header()
 {
-	global $titre;
+	global $title;
 
-	// Arial gras 15
+	// Arial bold 15
 	$this->SetFont('Arial','B',15);
-	// Calcul de la largeur du titre et positionnement
-	$w = $this->GetStringWidth($titre)+6;
+	// Calculamos ancho y posición del título.
+	$w = $this->GetStringWidth($title)+6;
 	$this->SetX((210-$w)/2);
-	// Couleurs du cadre, du fond et du texte
+	// Colores de los bordes, fondo y texto
 	$this->SetDrawColor(0,80,180);
 	$this->SetFillColor(230,230,0);
 	$this->SetTextColor(220,50,50);
-	// Epaisseur du cadre (1 mm)
+	// Ancho del borde (1 mm)
 	$this->SetLineWidth(1);
-	// Titre
-	$this->Cell($w,9,$titre,1,1,'C',true);
-	// Saut de ligne
+	// Título
+	$this->Cell($w,9,$title,1,1,'C',true);
+	// Salto de línea
 	$this->Ln(10);
 }
 
 function Footer()
 {
-	// Positionnement à 1,5 cm du bas
+	// Posición a 1,5 cm del final
 	$this->SetY(-15);
-	// Arial italique 8
+	// Arial itálica 8
 	$this->SetFont('Arial','I',8);
-	// Couleur du texte en gris
+	// Color del texto en gris
 	$this->SetTextColor(128);
-	// Numéro de page
-	$this->Cell(0,10,'Page '.$this->PageNo(),0,0,'C');
+	// Número de página
+	$this->Cell(0,10,'Página '.$this->PageNo(),0,0,'C');
 }
 
-function TitreChapitre($num, $libelle)
+function ChapterTitle($num, $label)
 {
 	// Arial 12
 	$this->SetFont('Arial','',12);
-	// Couleur de fond
+	// Color de fondo
 	$this->SetFillColor(200,220,255);
-	// Titre
-	$this->Cell(0,6,"Chapitre $num : $libelle",0,1,'L',true);
-	// Saut de ligne
+	// Título
+	$this->Cell(0,6,"Capítulo $num : $label",0,1,'L',true);
+	// Salto de línea
 	$this->Ln(4);
 }
 
-function CorpsChapitre($fichier)
+function ChapterBody($file)
 {
-	// Lecture du fichier texte
-	$txt = file_get_contents($fichier);
+	// Leemos el fichero
+	$txt = file_get_contents($file);
 	// Times 12
 	$this->SetFont('Times','',12);
-	// Sortie du texte justifié
+	// Imprimimos el texto justificado
 	$this->MultiCell(0,5,$txt);
-	// Saut de ligne
+	// Salto de línea
 	$this->Ln();
-	// Mention en italique
+	// Cita en itálica
 	$this->SetFont('','I');
-	$this->Cell(0,5,"(fin de l'extrait)");
+	$this->Cell(0,5,'(fin del extracto)');
 }
 
-function AjouterChapitre($num, $titre, $fichier)
+function PrintChapter($num, $title, $file)
 {
 	$this->AddPage();
-	$this->TitreChapitre($num,$titre);
-	$this->CorpsChapitre($fichier);
+	$this->ChapterTitle($num,$title);
+	$this->ChapterBody($file);
 }
 }
 
 $pdf = new PDF();
-$titre = 'Vingt mille lieues sous les mers';
-$pdf->SetTitle($titre);
-$pdf->SetAuthor('Jules Verne');
-$pdf->AjouterChapitre(1,'UN ÉCUEIL FUYANT','20k_c1.txt');
-$pdf->AjouterChapitre(2,'LE POUR ET LE CONTRE','20k_c2.txt');
+$title = '20000 Leguas de Viaje Submarino';
+$pdf->SetTitle($title);
+$pdf->SetAuthor('Julio Verne');
+$pdf->PrintChapter(1,'UN RIZO DE HUIDA','20k_c1.txt');
+$pdf->PrintChapter(2,'LOS PROS Y LOS CONTRAS','20k_c2.txt');
 $pdf->Output();
 ?>

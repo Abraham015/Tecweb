@@ -8,15 +8,13 @@
 <body>
 <h1>AcceptPageBreak</h1>
 <code><b>boolean</b> AcceptPageBreak()</code>
-<h2>Description</h2>
-Lorsqu'une condition de saut de page est remplie, la méthode est appelée, et en fonction de la
-valeur de retour, le saut est effectué ou non. L'implémentation par défaut renvoie une valeur
-selon le mode sélectionné par SetAutoPageBreak().
+<h2>Descripción</h2>
+En cualquier momento que un salto de página es encontrado, es invocado el método, y el salto es emitido o no dependiendo
+del valor retornado. La implementación por defecto retorna un valor de acuerdo a el modo seleccionado por SetAutoPageBreak().
 <br>
-Cette méthode est appelée automatiquement et ne devrait donc pas être appelée directement par
-l'application.
-<h2>Exemple</h2>
-La méthode est redéfinie dans une classe dérivée afin d'obtenir un formatage sur 3 colonnes :
+Este método es invocado automáticamente y no debería ser llamado directamente por la aplicación.
+<h2>Ejemplo</h2>
+El método es anulado por una clase heredada con el propósito de obtener un diseño de tres columnas.
 <div class="doc-source">
 <pre><code>class PDF extends FPDF
 {
@@ -24,7 +22,7 @@ var $col = 0;
 
 function SetCol($col)
 {
-    // Positionnement sur une colonne
+    // Move position to a column
     $this-&gt;col = $col;
     $x = 10+$col*65;
     $this-&gt;SetLeftMargin($x);
@@ -35,14 +33,14 @@ function AcceptPageBreak()
 {
     if($this-&gt;col&lt;2)
     {
-        // Aller à la colonne suivante
+        // Go to next column
         $this-&gt;SetCol($this-&gt;col+1);
         $this-&gt;SetY(10);
         return false;
     }
     else
     {
-        // Retour en première colonne et saut de page
+        // Regrese a la primera columna y emita un salto de página
         $this-&gt;SetCol(0);
         return true;
     }
@@ -53,12 +51,12 @@ $pdf = new PDF();
 $pdf-&gt;AddPage();
 $pdf-&gt;SetFont('Arial','',12);
 for($i=1;$i&lt;=300;$i++)
-    $pdf-&gt;Cell(0,5,"Ligne $i",0,1);
+    $pdf-&gt;Cell(0,5,"Line $i",0,1);
 $pdf-&gt;Output();</code></pre>
 </div>
-<h2>Voir</h2>
+<h2>Vea además</h2>
 <a href="setautopagebreak.htm">SetAutoPageBreak</a>
 <hr style="margin-top:1.5em">
-<div style="text-align:center"><a href="index.htm">Index</a></div>
+<div style="text-align:center"><a href="index.htm">Inicio</a></div>
 </body>
 </html>

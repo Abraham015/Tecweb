@@ -45,8 +45,6 @@
 		<?php
 			$sql="SELECT Boleta,Nombre,AP,AM,horario FROM identidad, examen WHERE identidad.Boleta=examen.Boletaex";
 			$result=mysqli_query($conn,$sql);
-			/*$sql2="SELECT horario FROM examen";
-			$result2=mysqli_query($conn,$sql2);*/
 			while($mostrar=mysqli_fetch_array($result)) {
 		?>
 		<tr>
