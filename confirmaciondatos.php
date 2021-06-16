@@ -194,6 +194,12 @@
     } else {
         echo "Error: " . $pro . "<br>" . $conn->error;
     }
+
+    if ($conn->query($turno) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $turno . "<br>" . $conn->error;
+    }
     $conn->close();
 
     //Tomaremos las variables que se tienen
@@ -451,7 +457,6 @@
     $pdf->SetTextColor(3,3,3); //Letra color negro
     $pdf->Cell(60, 5,$lab, 1,0,'C','R');
 
-
     $pdf->Output('F', 'C:\wamp64\www\Proyecto\ficha.pdf'); 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -497,6 +502,5 @@
     <center><a href='ficha.pdf'><input type='button' value='Ver PDF'></a></center>;
     <p align='center'>Si quieres mandar tu PDF por correo, porfavor da click en el boton 'Enviar PDF', de caso contrario, puedes regresar a la página principal</p>;
     <center><a href='Casa.html'><input type='submit' value='Volver al inicio'/></a>&nbsp;<a href='Correo.html'><input type='button' value='Enviar PDF'></a></center>;
-
- 
-
+</body>
+</html>
