@@ -31,12 +31,16 @@ create table Procedencia(
 create table examen(
     Num int,
     horario varchar(100),
-    laboratorio varchar(50)
+    laboratorio varchar(50),
+    Boletaex varchar(10)
 );
+
+insert into examen values (0,'prueba','prueba','prueba');
 
 alter table identidad;
 alter table Contacto;
 alter table Procedencia;
+alter table examen;
 
 select * from identidad;
 select * from Contacto;
