@@ -168,7 +168,7 @@ fieldset{
   transform: scale(1, 1);
 }
 
-.form-wrapper .button, .form-wrapper .submit,.form-wrapper .button3{
+.form-wrapper .button, .form-wrapper .submit,.form-wrapper .button3,.form-wrapper input[type="button"]{
   background-color: navy;
   display: inline-block;
   padding: 8px 30px;
@@ -204,7 +204,7 @@ fieldset{
   width: 200px;
   outline: none;
   font-size: 14px !important;
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: monserrat;
 }
 .form-wrapper input[type="radio"] {
       margin-left: -70px;
@@ -218,7 +218,7 @@ fieldset{
   width: 200px;
   outline: none;
   font-size: 14px !important;
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: monserrat;
 }
 
 button,input[type="button2"]{
@@ -233,7 +233,6 @@ button,input[type="button2"]{
   position: relative;
   border-radius: 10px;
 }
-
 
 
 

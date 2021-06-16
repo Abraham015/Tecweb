@@ -184,7 +184,7 @@ const validarCorreo = () => {
 // Validar escuela
 const validarEscuela = () => {
   // Obtenener el campo asociado a escuela.
-  const escuela = document.getElementById("escuela");
+  const escuela = document.getElementById("school");
 
   // Obtener el texto dentro del campo.
   const textoEscuela = escuela.value;
@@ -289,3 +289,4 @@ const formulario = document.getElementById("formulario");
 
 // Añadimos el evento de escucha para cuando se "envíe".
 formulario.addEventListener("submit", validarCampos);
+formulario.addEventListener("button", validarCampos);

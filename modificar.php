@@ -35,9 +35,15 @@
     <script src="jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <h1 align="center">Modificaci&oacute;n Datos Generales</h1>
+	<table align="center">
+      <tr>
+        <td><img src="images/Blanco.png" width="200px" height="150px"></td>
+        <td><h1 align="center">Modificaci&oacute;n Datos Generales</h1>
     <p>Alumnos de Nuevo Ingreso
-    <br>(Agosto 2021)</p>
+    <br>(Agosto 2021)</p></td>
+    <td><img src="images/blanco1.png"></td>
+      </tr>
+    </table>
 <div class="container">
     <div class="wrapper">
       <ul class="steps">

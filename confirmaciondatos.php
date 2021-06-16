@@ -320,13 +320,51 @@
     $pdf->Cell(0,10,'Promedio: '.$promedio.'',0,1);
     $pdf->Cell(0,10,'Numero de opcion: '.utf8_decode($opcion).'',0,1);*/
 
-    $pdf->Output('F', 'C:\wamp64\www\Tecweb\ficha.pdf');
-
-
-    //Se le preguntará al usuario si quiere o no que se le mande su PDF a su correo
-    echo "<p align='center'><object  data='ficha.pdf'></p></object>";
-    echo "<p align='center'>En la parte superior se puede encontrar una imagen previa de como resulto el PDF con tus datos, si quieres visualizarlo mejor da click en el boton de abajo</p>";
-    echo "<center><a href='ficha.pdf'><input type='button' value='Ver PDF'></a></center>";
-    echo "<p align='center'>Si quieres mandar tu PDF por correo, porfavor da click en el boton 'Enviar PDF', de caso contrario, puedes regresar a la página principal</p>";
-    echo "<center><a href='Casa.html'><input type='submit' value='Volver al inicio'/></a>&nbsp;<a href='Correo.html'><input type='button' value='Enviar PDF'></a></center>";
+    $pdf->Output('F', 'C:\wamp64\www\Tecweb\ficha.pdf'); 
 ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>.: Registro Alumnos :. </title>
+    <link rel="stylesheet" href="EstiloFormulario.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        input[type="submit"],input[type="button"]{
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;   
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: darkgrey;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+    </style>
+</head>
+<body>
+    <table align="center">
+      <tr>
+        <td><img src="images/Blanco.png" width="200px" height="150px"></td>
+        <td><h1 align="center">&nbsp;Generaci&oacute;n de ficha PDF</h1>
+    <p>Alumnos de Nuevo Ingreso
+    <br>(Agosto 2021)</p></td>
+    <td><img src="images/blanco1.png"></td>
+      </tr>
+    </table>
+
+    <?php //Se le preguntará al usuario si quiere o no que se le mande su PDF a su correo
+    echo "<p align='center'><object  data='ficha.pdf'></p></object>";   ?>
+    <p align='center'>En la parte superior se puede encontrar una imagen previa de como resulto el PDF con tus datos, si quieres visualizarlo mejor da click en el boton de abajo</p>;
+    <center><a href='ficha.pdf'><input type='button' value='Ver PDF'></a></center>;
+    <p align='center'>Si quieres mandar tu PDF por correo, porfavor da click en el boton 'Enviar PDF', de caso contrario, puedes regresar a la página principal</p>;
+    <center><a href='Casa.html'><input type='submit' value='Volver al inicio'/></a>&nbsp;<a href='Correo.html'><input type='button' value='Enviar PDF'></a></center>;
+
+ 
+
