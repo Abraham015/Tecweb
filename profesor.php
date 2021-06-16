@@ -10,8 +10,7 @@
     <div class="header">
       <div class="logo-title"><img src="images/blanco1.png"></div>
       <div class="logo-title"><img src="images/Blanco.png"></div>
-      <div class="menu">
-        <a href="login.php"><li class="module-login active">Login</li></a>
+      <div class="menu"><li class="module-login active">Login</li></a>
       </div>
     </div>
     <form id="formLogin" method="POST" class="form">

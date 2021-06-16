@@ -51,7 +51,7 @@
       <ul class="steps">
         <li class="is-active">Registro</li>
       </ul>
-      <form class="form-wrapper" method="POST" action="datos.php"name="formulario" id="formulario">
+      <form class="form-wrapper" method="POST" action="datosupdate.php"name="formulario" id="formulario">
     <fieldset class="section is-active">      
     <h2>Identidad</h2><hr>
     <table align="center">
