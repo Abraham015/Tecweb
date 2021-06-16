@@ -23,54 +23,43 @@
 <div class="container">
     <div class="wrapper">
       <ul class="steps">
-        <li class="is-active">Identidad</li>
-        <li>Contacto</li>
-        <li>Procedencia</li>
+        <li class="is-active">Registro</li>
       </ul>
       <form class="form-wrapper" method="POST" action="datos.php"name="formulario" id="formulario">
     <fieldset class="section is-active">      
-    <h2>Identidad</h2>
-        <table align="center" >
-            <tr>
-                <td align="right"><label for ="boleta">No. de boleta:</label></td>
-                <td><input type="text" id="boleta" placeholder="Escribe tu No. de Boleta" name="boleta" size="10" maxlength="10" required /></td>
-            </tr>
-            <tr>
-                <td align="right"><label for ="nombre">Nombre(s):</label></td>
-                <td><input type="text" id="nombre" placeholder="Escribe tu Nombre(s)"name="nombre" size="30" maxlength="30" required /></td>
-            </tr>
-            <tr>
-                <td align="right"><label for ="apaterno">Apellido Paterno:</label></td>
-                <td><input type="text" id="apaterno" placeholder="Escribe tu Ape.Paterno"name="apaterno" size="30" maxlength="30" required /></td>
-            </tr>
-            <tr>
-                <td align="right"><label for ="amaterno">Apellido Materno:</label></td>
-                <td><input type="text" id="amaterno" placeholder="Escribe tu Ape.Materno" name="amaterno"size="30" maxlength="30" required /></td>
-            </tr>
-            <tr>
-                <td align="right"><label for ="nacimiento">Fecha de nacimiento:</label></td>
-                <td><input type="date" name="fecha" size="10" maxlength="15" min="1900-01-01" required /></td>
-            </tr>
-            <tr>
-                <td align="right"><label for ="genero">G&eacute;nero:</label></td>
-                  <td><input type="radio" name="mf" value="m" required>Masculino<br>
-                  <input type="radio" name="mf" value="f" required>Femenino</td>
-            </tr>
-            <tr>
-                <td align="right"><label for ="curp">CURP:</label></td>
-                <td><input type="alphanumeric" name="curp" id="curp" placeholder="Ingresa tu CURP "size="18" maxlength="18" required /></td>
-            </tr>
-            </table>
-            <div class="button">Siguiente</div>
-    </fieldset> 
-    <fieldset class="section">
-        <h2>Contacto</h2>
+    <h2>Identidad</h2><hr>
         <table align="center">
             <tr>
-              <td>Calle y N&uacutemero: <input type="text" name="calle" id="calle"placeholder="Indica tu Calle y N&uacute;mero" required></td>
+                <td>No. de boleta:<input type="text" id="boleta" placeholder="Escribe tu No. de Boleta" name="boleta" size="10" maxlength="10" required /></td>
             </tr>
             <tr>
-              <td>Colonia: <input type="text" name="colonia" id="colonia"placeholder="Indica tu Colonia" required></td> 
+                <td>Nombre(s):<input type="text" id="nombre" placeholder="Escribe tu Nombre(s)"name="nombre" size="30" maxlength="30" required /></td>
+            </tr>
+            <tr>
+                <td>Apellido Paterno:<input type="text" id="apaterno" placeholder="Escribe tu Ape.Paterno"name="apaterno" size="30" maxlength="30" required /></td>
+            </tr>
+            <tr>
+                <td>Apellido Materno:<input type="text" id="amaterno" placeholder="Escribe tu Ape.Materno" name="amaterno"size="30" maxlength="30" required /></td>
+            </tr>
+            <tr>
+                <td>Fecha de nacimiento:<br><input type="date" id="fecha" name="fecha" size="10" maxlength="15" min="1900-01-01" required /></td>
+            </tr>
+            <tr>
+                <td align="center">G&eacute;nero:<br><br>
+                  Masculino<br><input type="radio" name="mf" value="m" required><br>
+                  Femenino<br><input type="radio" name="mf" value="f" required></td>
+            </tr>
+            <tr>
+                <td>CURP:<br><input type="alphanumeric" name="curp" id="curp" placeholder="Ingresa tu CURP "size="18" maxlength="18" required /></td>
+            </tr>
+            </table>
+        <hr><h2>Contacto</h2><hr>
+        <table align="center">
+            <tr>
+              <td>Calle y N&uacutemero: <input type="text" name="calle" id="calle" placeholder="Indica tu Calle y N&uacute;mero" required></td>
+            </tr>
+            <tr>
+              <td>Colonia: <input type="text" name="colonia" id="colonia" placeholder="Indica tu Colonia" required></td> 
             </tr>
             <tr>
               <td>C&oacutedigo Postal: <br> <input type="number" name="CP" id="CP" placeholder="Digita tu Codigo Postal" maxlength="5" required></td>
@@ -82,10 +71,7 @@
               <td>Correo Electr&oacutenico: <input type="text" name="correo" id="correo" placeholder="juan@correo.com" required></td>
             </tr>
         </table>
-    <div class="button">Siguiente</div>
-    </fieldset> 
-    <fieldset class="section">
-           <h2>Procedencia</h2>
+          <hr><h2>Procedencia</h2><hr>
         <table align="center">
               <tr>
                 <td>Escuela de Procedencia:<br><select name="Procedencia" required>
@@ -163,14 +149,14 @@
                 <td>ESCOM fue tu:</td>
               </tr>
               </table><br><br>
-              <div align="center" style="position: absolute;top: 470px;left: 300px;margin: -25px 0 0 -25px;">
-                <label>Primera Opci&oacuten</label>&nbsp;&nbsp;<input type="radio" name="opcion" value="primera"><br>
-                <label>Segunda Opci&oacuten</label><input type="radio" name="opcion" value="segunda"><br>
-                <label>Tercera Opci&oacuten</label>&nbsp;&nbsp;<input type="radio" name="opcion" value="tercera"><br>
-                <label>Cuarta Opci&oacuten</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="opcion" value="cuarta"><br>
+              <div align="center" style="position: absolute;top: 1630px;left: 272px;margin: -25px 0 0 -25px;">
+                <label>Primera Opci&oacuten</label><br><input type="radio" name="opcion" value="primera"><br>
+                <label>Segunda Opci&oacuten</label><br><input type="radio" name="opcion" value="segunda"><br>
+                <label>Tercera Opci&oacuten</label><br><input type="radio" name="opcion" value="tercera"><br>
+                <label>Cuarta Opci&oacuten</label><br><input type="radio" name="opcion" value="cuarta"><br>
               </div>
-          <br><br><br><br><br><br>
-          <p><input class="button" type="reset"value="Limpiar"></p>
+          <br><br><br><br><br><br><br><br><br>
+          <p><input class="reset button"type="reset" value="Limpiar"</p>
           <p><input class="submit button" type="submit" value="Enviar"></p>
           
   </fieldset>
@@ -181,24 +167,5 @@
 </body>
 </html>
 <script>
-  $(document).ready(function(){
-  $(".form-wrapper .button").click(function(){
-    var button = $(this);
-    var currentSection = button.parents(".section");
-    var currentSectionIndex = currentSection.index();
-    var headerSection = $('.steps li').eq(currentSectionIndex);
-    currentSection.removeClass("is-active").next().addClass("is-active");
-    headerSection.removeClass("is-active").next().addClass("is-active");
-
-    $(".form-wrapper").submit(function(e) {
-      window.location.href="datos.php";
-    });
-
-    if(currentSectionIndex === 3){
-      $(document).find(".form-wrapper .section").first().addClass("is-active");
-      $(document).find(".steps li").first().addClass("is-active");
-    }
-  });
-});
 
 </script>

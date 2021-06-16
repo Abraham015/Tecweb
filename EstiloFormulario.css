@@ -7,6 +7,7 @@ html, body{
   background-image: url(./images/fondo.jpg);
 }
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
 
 /*form styles*/
 
@@ -27,7 +28,12 @@ h1{
     font-style: oblique;
     text-shadow: 3px 3px royalblue;
 }
-h2, h3, h4, h5 ,h6{
+h2{
+  font-weight: 400;
+  font-family:monserrat;
+  font-style: oblique;
+}
+h3, h4, h5 ,h6{
   font-weight: 200;
   font-family: montserrat;
 }
@@ -181,7 +187,7 @@ fieldset{
   
 }
 
-.form-wrapper .submit{
+.form-wrapper .submit .form-wrapper .reset{
   border: none;
   outline: none;
   -webkit-box-sizing: content-box;
@@ -191,7 +197,6 @@ fieldset{
   -moz-appearance: none;
   appearance: none;
   left: 300 px;
-
 }
 
 .form-wrapper input[type="text"],
@@ -207,7 +212,7 @@ fieldset{
   font-family: monserrat;
 }
 .form-wrapper input[type="radio"] {
-      margin-left: -70px;
+      text-align: center;
 }
 .form-wrapper select,option{
     display: block;
@@ -220,8 +225,7 @@ fieldset{
   font-size: 14px !important;
   font-family: monserrat;
 }
-
-button,input[type="button2"]{
+button{
   text-align: center;
   background-color: navy;
   display: inline-block;
@@ -232,6 +236,21 @@ button,input[type="button2"]{
   font-family: 'Open Sans', sans-serif !important;
   position: relative;
   border-radius: 10px;
+  width: 120px;
+}
+
+input[type="button2"]{
+  text-align: center;
+  background-color: navy;
+  display: inline-block;
+  padding: 8px 30px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px !important;
+  font-family: 'Open Sans', sans-serif !important;
+  position: relative;
+  border-radius: 10px;
+  width: 120px;
 }
 
 

@@ -30,15 +30,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>.: Modificaci&oacute;n de Datos Generales:. </title>
+    <title>.:Modificaci&oacute;n Datos Generales:. </title>
     <link rel="stylesheet" href="EstiloFormulario.css">
     <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+
 </head>
 <body>
-	<table align="center">
+    <table align="center">
       <tr>
         <td><img src="images/Blanco.png" width="200px" height="150px"></td>
-        <td><h1 align="center">Modificaci&oacute;n Datos Generales</h1>
+        <td><h1 align="center">&nbsp;&nbsp;.: Modificaci&oacute;n Datos :.</h1>
     <p>Alumnos de Nuevo Ingreso
     <br>(Agosto 2021)</p></td>
     <td><img src="images/blanco1.png"></td>
@@ -47,69 +49,55 @@
 <div class="container">
     <div class="wrapper">
       <ul class="steps">
-        <li class="is-active">Identidad</li>
-        <li>Contacto</li>
-        <li>Procedencia</li>
+        <li class="is-active">Registro</li>
       </ul>
-      <form class="form-wrapper" method="POST" action="datos.php">
+      <form class="form-wrapper" method="POST" action="datos.php"name="formulario" id="formulario">
     <fieldset class="section is-active">      
-    <h2>Identidad</h2>
-        			<table align="center">
-			            <tr>
-			                <td><label for ="boleta">No. de boleta:</label></td>
-			                <td><input type="number" id="boleta" name="boleta" size="10" maxlength="10" value="<?php echo $row['Boleta']; ?>" required/></td>
-			            </tr>
-			            <tr>
-			                <td><label for ="nombre">Nombre(s):</label></td>
-			                <td><input type="text" id="nombre" name="nombre" size="30" maxlength="30" value="<?php echo $row['Nombre']; ?>" required /></td>
-			            </tr>
-			            <tr>
-			                <td><label for ="apaterno">Apellido Paterno:</label></td>
-			                <td><input type="text" id="apaterno" name="apaterno" size="30" maxlength="30" value="<?php echo $row['AP']; ?>" required /></td>
-			            </tr>
-			            <tr>
-			                <td><label for ="amaterno">Apellido Materno:</label></td>
-			                <td><input type="text" id="amaterno" name="amaterno"size="30" maxlength="30" value="<?php echo $row['AM']; ?>" required /></td>
-			            </tr>
-			            <tr>
-			                <td><label for ="nacimiento">Fecha de nacimiento:</label></td>
-			                <td><input type="date" name="fecha" size="10" maxlength="15" value="<?php echo $row['fecha']; ?>" required /></td>
-			            </tr>
-			            <tr>
-			                <td><label for ="genero">G&eacute;nero:</label></td>
-			                  <td><input type="radio" name="mf" value="m" <?php if($row['Genero']=='Masculino') echo "checked=\"checked\" " ?> required> Masculino
-			                      <input type="radio" name="mf" value="f" <?php if($row['Genero']=='Femenino') echo "checked=\"checked\" " ?> required> Femenino</td>
-			            </tr>
-			            <tr>
-			                <td><label for ="curp">CURP:</label></td>
-			                <td><input type="alphanumeric" name="curp" size="18" maxlength="18" value="<?php echo $row['CURP']; ?>" required /></td>
-			            </tr>
-            		</table>
-            <div class="button">Siguiente</div>
-			</fieldset>
-			<fieldset class="section">
-		        <h2>Contacto :</h2>
-			        <table align="center">
-			            <tr>
-			              <td>Calle y N&uacutemero: <input type="text" name="calle" value="<?php echo $row1['Calle']; ?>" required></td>
-			            </tr>
-			            <tr>
-			              <td>Colonia: <input type="text" name="colonia" value="<?php echo $row1['Colonia']; ?>" required></td> 
-			            </tr>
-			            <tr>
-			              <td>C&oacutedigo Postal:<br> <input type="number" name="CP" value="<?php echo $row1['CP']; ?>" required></td>
-			            </tr>
-			            <tr>
-			              <td>Tel&eacutefono o celular:<br>  <input type="number" name="cel" value="<?php echo $row1['Celular']; ?>" required></td>
-			            </tr>
-			            <tr>
-			              <td>Correo Electr&oacutenico: <input type="text" name="correo" value="<?php echo $row1['Correo']; ?>" required></td>
-			            </tr>
-			        </table>
-			<div class="button">Siguiente</div>
-    		</fieldset>
-    		<fieldset class="section">
-		        <h2>Procedencia :</h2>
+    <h2>Identidad</h2><hr>
+    <table align="center">
+            <tr>
+                <td>No. de boleta:<input type="text" id="boleta" value="<?php echo $row['Boleta']; ?>" name="boleta" size="10" maxlength="10" required /></td>
+            </tr>
+            <tr>
+                <td>Nombre(s):<input type="text" id="nombre" value="<?php echo $row['Nombre']; ?>" name="nombre" size="30" maxlength="30" required /></td>
+            </tr>
+            <tr>
+                <td>Apellido Paterno:<input type="text" id="apaterno" value="<?php echo $row['AP']; ?>" name="apaterno" size="30" maxlength="30" required /></td>
+            </tr>
+            <tr>
+                <td>Apellido Materno:<input type="text" id="amaterno" value="<?php echo $row['AM']; ?>" name="amaterno"size="30" maxlength="30" required /></td>
+            </tr>
+            <tr>
+                <td>Fecha de nacimiento:<br><input type="date" id="fecha" name="fecha" value="<?php echo $row['fecha']; ?>" size="10" maxlength="15" min="1900-01-01" required /></td>
+            </tr>
+            <tr>
+                <td align="center">G&eacute;nero:<br><br>
+                  Masculino<br><input type="radio" name="mf" value="m" <?php if($row['Genero']=='Masculino') echo "checked=\"checked\" " ?> required><br>
+                  Femenino<br><input type="radio" name="mf" value="f" <?php if($row['Genero']=='Femenino') echo "checked=\"checked\" " ?> required></td>
+            </tr>
+            <tr>
+                <td>CURP:<br><input type="alphanumeric" name="curp" id="curp" value="<?php echo $row['CURP']; ?>" "size="18" maxlength="18" required /></td>
+            </tr>
+            </table>
+        <hr><h2>Contacto</h2><hr>
+        <table align="center">
+            <tr>
+              <td>Calle y N&uacutemero: <input type="text" name="calle" id="calle" value="<?php echo $row1['Calle']; ?>" required></td>
+            </tr>
+            <tr>
+              <td>Colonia: <input type="text" name="colonia" id="colonia" value="<?php echo $row1['Colonia']; ?>" required></td> 
+            </tr>
+            <tr>
+              <td>C&oacutedigo Postal: <br> <input type="number" name="CP" id="CP" value="<?php echo $row1['CP']; ?>" maxlength="5" required></td>
+            </tr>
+            <tr>
+              <td>Tel&eacutefono o celular: <br><input type="number" name="cel" id="cel" value="<?php echo $row1['Celular']; ?>" required></td>
+            </tr>
+            <tr>
+              <td>Correo Electr&oacutenico: <input type="text" name="correo" id="correo" value="<?php echo $row1['Correo']; ?>" required></td>
+            </tr>
+        </table>
+         <hr><h2>Procedencia :</h2><hr>
 		        <table align="center">
 		            <tr>
 		            	<td>Escuela de Procedencia:<select name="Procedencia" required>
@@ -186,41 +174,25 @@
 		            <tr>
 		                <td>ESCOM fue tu:</td>
 		            </tr>
-		            <tr>
-		                <td><input type="radio" name="opcion" value="primera" <?php if($row2['opcion']=='Primera Opción') echo "checked=\"checked\" " ?> >Primera Opci&oacuten</td>
-		            </tr>
-		            <tr>
-		                <td><input type="radio" name="opcion" value="segunda" <?php if($row2['opcion']=='Segunda Opción') echo "checked=\"checked\" " ?>>Segunda Opci&oacuten</td>
-		            </tr>
-		            <tr>
-		                <td><input type="radio" name="opcion" value="tercera" <?php if($row2['opcion']=='Tercera Opción') echo "checked=\"checked\" " ?> >Tercera Opci&oacuten</td>
-		            </tr>
-		            <tr>
-		                <td><input type="radio" name="opcion" value="cuarta" <?php if($row2['opcion']=='Cuarta Opción') echo "checked=\"checked\" " ?> >Cuarta Opci&oacuten</td>
-		            </tr>
-		        </table>
-		        <a href="paginadedatos.php"><input type="button2" value="Regresar"></a><button type="submit">Guardar</button>
-    		</fieldset>
-			</form>
-		</div>
-	</body>
+              </table><br><br>
+              <div align="center" style="position: absolute;top: 1630px;left: 272px;margin: -25px 0 0 -25px;">
+                <label>Primera Opci&oacuten</label><br><input type="radio" name="opcion" value="primera"<?php if($row2['opcion']=='Primera Opción') echo "checked=\"checked\" " ?>><br>
+                <label>Segunda Opci&oacuten</label><br><input type="radio" name="opcion" value="segunda"<?php if($row2['opcion']=='Segunda Opción') echo "checked=\"checked\" " ?>><br>
+                <label>Tercera Opci&oacuten</label><br><input type="radio" name="opcion" value="tercera"<?php if($row2['opcion']=='Tercera Opción') echo "checked=\"checked\" " ?>><br>
+                <label>Cuarta Opci&oacuten</label><br><input type="radio" name="opcion" value="cuarta"<?php if($row2['opcion']=='Cuarta Opción') echo "checked=\"checked\" " ?>><br>
+              </div>
+          <br><br><br><br><br><br><br><br><br>
+          <p><a href="paginadedatos.php"><input type="button2" value="Regresar"></a></p>
+          <p><button type="submit">Guardar</button></p>
+          
+          
+  </fieldset>
+</form>
+<script src="Validaciones.js" type="text/javascript"></script>
+</div>
+  </div>
+</body>
 </html>
 <script>
-  $(document).ready(function(){
-  $(".form-wrapper .button").click(function(){
-    var button = $(this);
-    var currentSection = button.parents(".section");
-    var currentSectionIndex = currentSection.index();
-    var headerSection = $('.steps li').eq(currentSectionIndex);
-    currentSection.removeClass("is-active").next().addClass("is-active");
-    headerSection.removeClass("is-active").next().addClass("is-active");
-
-
-    if(currentSectionIndex === 3){
-      $(document).find(".form-wrapper .section").first().addClass("is-active");
-      $(document).find(".steps li").first().addClass("is-active");
-    }
-  });
-});
 
 </script>
