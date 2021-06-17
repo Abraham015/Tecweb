@@ -1,28 +1,34 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <head>
-    <title>.: Registro Alumnos :.</title>
-  </head>
-  <body>
-    <p align="center">
-      <h3>REGISTRO DE DATOS GENERALES</h3>
-      <h3>Alumnos de Nuevo Ingreso</h3>
-      <h3>(Agosto 2021)</h3>
-    </p>
-    <form
-      method="POST"
-      id="formulario"
-      name="formulario"
-    >
-      <fieldset>
-        <legend>Identidad :</legend>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>.: Registro Alumnos :. </title>
+    <link rel="stylesheet" href="../EstiloFormulario.css">
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <table align="center">
+      <tr>
+        <td><img src="../images/Blanco.png" width="200px" height="150px"></td>
+        <td><h1 align="center">&nbsp;Registro de Datos Generales</h1>
+    <p>Alumnos de Nuevo Ingreso
+    <br>(Agosto 2021)</p></td>
+    <td><img src="../images/blanco1.png"></td>
+      </tr>
+    </table>
+<div class="container">
+    <div class="wrapper">
+      <ul class="steps">
+        <li class="is-active">Registro</li>
+      </ul>
+    <form class="form-wrapper" method="POST" action="../datos.php"name="formulario" id="formulario">
+      <fieldset style="background: white; font-family: monserrat;text-align: center;">
+        <h2>Identidad :</h2><hr>
         <table align="center">
           <tr>
-            <td><label for="boleta">No. de boleta:</label></td>
-            <td>
+            <td><label for="boleta">No. de boleta o PM:</label><br>
               <input
                 type="text"
                 id="boleta"
@@ -31,15 +37,14 @@
                 size="30"
                 maxlength="10"
                 required
-
+                
               />
             </td>
-
+            
           </tr>
 
           <tr>
-            <td><label for="nombre">Nombre(s):</label></td>
-            <td>
+            <td><label for="nombre">Nombre(s):</label><br>
               <input
                 type="text"
                 id="nombre"
@@ -48,13 +53,12 @@
                 size="30"
                 maxlength="30"
                 required
-
+                
               />
             </td>
           </tr>
           <tr>
-            <td><label for="apaterno">Apellido Paterno:</label></td>
-            <td>
+            <td><label for="apaterno">Apellido Paterno:</label><br>
               <input
                 type="text"
                 id="apaterno"
@@ -63,13 +67,12 @@
                 size="30"
                 maxlength="30"
                 required
-
+                
               />
             </td>
           </tr>
           <tr>
-            <td><label for="amaterno">Apellido Materno:</label></td>
-            <td>
+            <td><label for="amaterno">Apellido Materno:</label><br>
               <input
                 type="text"
                 id="amaterno"
@@ -78,32 +81,29 @@
                 size="30"
                 maxlength="30"
                 required
-
+                
               />
             </td>
           </tr>
           <tr>
-            <td><label for="nacimiento">Fecha de nacimiento:</label></td>
-            <td>
+            <td><label for="nacimiento">Fecha de nacimiento:</label><br>
               <input
                 type="date"
-                name="fecha"
+                name="fecha"  
                 id="fecha"
-                min="1900-01-01"
+                min="1990-01-01"
                 required
               />
             </td>
           </tr>
           <tr>
-            <td><label for="genero">G&eacute;nero:</label></td>
-            <td>
-              <input type="radio" name="genero" value="m" required/> Masculino
-              <input type="radio" name="genero" value="f" /> Femenino
+            <td><label for="genero">G&eacute;nero:</label><br><br>
+              Masculino<br><input type="radio" name="mf" value="m" required/><br> 
+              Femenino<br><input type="radio" name="mf" value="f" /> <br><br>
             </td>
           </tr>
           <tr>
-            <td><label for="curp">CURP:</label></td>
-            <td>
+            <td><label for="curp">CURP:</label><br>
               <input
                 type="alphanumeric"
                 name="curp"
@@ -116,9 +116,7 @@
             </td>
           </tr>
         </table>
-      </fieldset>
-      <fieldset>
-        <legend>Contacto :</legend>
+        <hr><h2>Contacto :</h2><hr>
         <table align="center">
           <tr>
             <td>
@@ -141,7 +139,7 @@
                 id="colonia"
                 placeholder="Indica tu Colonia"
                 required
-
+                
               />
             </td>
           </tr>
@@ -168,7 +166,7 @@
                 placeholder="55-55555555"
                 maxlength="10"
                 required
-
+                
               />
             </td>
           </tr>
@@ -181,14 +179,12 @@
                 id="correo"
                 placeholder="juan@correo.com"
                 required
-
+                
               />
             </td>
           </tr>
         </table>
-      </fieldset>
-      <fieldset>
-        <legend>Procedencia :</legend>
+        <hr><h2>Procedencia :</h2><hr>
         <table align="center">
           <tr>
             <td>
@@ -288,21 +284,21 @@
                 type="text"
                 id="escuela"
                 name="escuela"
-                placeholder="Registra tu Escuela"
-
+                placeholder="Registra tu Escuela"   
+                
               />
             </td>
           </tr>
           <tr>
             <td>
-              Promedio:
+              Promedio:<br>
               <input
                 type="number"
                 name="promedio"
                 id="promedio"
                 placeholder="Digita tu Promedio"
                 min="6"
-                step="0.01"
+                step="0.01" 
                 max="10"
                 required
               />
@@ -313,38 +309,49 @@
           </tr>
           <tr>
             <td>
-              <input type="radio" name="opcion" value="primera" required />Primera
-              Opci&oacuten
+              Primera Opci&oacuten<br><input type="radio" name="opcion" value="primera" required /><br>
+
+              Segunda Opci&oacuten<br><input type="radio" name="opcion" value="segunda" /><br>
+        
+              Tercera Opci&oacuten<br><input type="radio" name="opcion" value="tercera" /><br>
+              
+              Cuarta Opci&oacuten<br><input type="radio" name="opcion" value="cuarta" /><br>
+              
             </td>
           </tr>
-          <tr>
-            <td>
-              <input type="radio" name="opcion" value="segunda" />Segunda
-              Opci&oacuten
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input type="radio" name="opcion" value="tercera" />Tercera
-              Opci&oacuten
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input type="radio" name="opcion" value="cuarta" />Cuarta
-              Opci&oacuten
-            </td>
-          </tr>
-        </table>
-      </fieldset>
-      <br />
-      <center>
-        <input type="submit" value="Enviar" />&nbsp;<input
-          type="reset"
-          value="Limpiar"
-        />
+        </table><br><br>
+        <center>
+        <input type="submit" value="Enviar" style="
+        text-align: center;
+        background-color: navy;
+        display: inline-block;
+        padding: 8px 30px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px !important;
+        font-family: 'Open Sans', sans-serif !important;
+        position: relative;
+        border-radius: 10px;
+        width: 120px;"/>&nbsp;
+        <input type="reset"value="Limpiar" style="
+        text-align: center;
+        background-color: navy;
+        display: inline-block;
+        padding: 8px 30px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px !important;
+        font-family: 'Open Sans', sans-serif !important;
+        position: relative;
+        border-radius: 10px;
+        width: 120px;
+        "/>
       </center>
+      </fieldset>
+      <br>
     </form>
     <script src="Validaciones.js" type="text/javascript"></script>
+  </div>
+</div>
   </body>
-</html> 
+</html>
