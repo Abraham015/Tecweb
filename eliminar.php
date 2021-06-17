@@ -25,6 +25,8 @@
 	$resultado2=$conn->query( "DELETE FROM Procedencia WHERE Boleta = '$bol'");
 	//$row2 = $resultado2->fetch_assoc();
 
+	$resultado3=$conn->query( "DELETE FROM examen WHERE Boletaex = '$bol'");	
+
 	header('Location: paginadedatos.php');
 	
 ?>

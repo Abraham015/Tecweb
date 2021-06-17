@@ -1,3 +1,4 @@
+
 $('#formLogin').submit(function(e){
    e.preventDefault();
    var usuario = $.trim($("#usuario").val());    
@@ -11,7 +12,6 @@ $('#formLogin').submit(function(e){
       return false; 
     }else{
         $.ajax({
-           url:"verificacion.php",
            type:"POST",
            datatype: "json",
            data: {usuario:usuario, password:password}, 

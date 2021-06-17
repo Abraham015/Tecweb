@@ -29,18 +29,19 @@ create table Procedencia(
 );
 
 create table examen(
-    Num int,
+    Num int auto_increment,
     horario varchar(100),
     laboratorio varchar(50),
-    Boletaex varchar(10)
+    Boletaex varchar(10),
+    primary key (Num)
 );
-
-insert into examen values (0,'prueba','prueba','prueba');
 
 alter table identidad;
 alter table Contacto;
 alter table Procedencia;
 alter table examen;
+
+insert into examen values(3,'prueba', 'prueba', 'prueba');
 
 select * from identidad;
 select * from Contacto;

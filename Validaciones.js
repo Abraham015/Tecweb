@@ -12,7 +12,7 @@ const expresionesRegulares = {
   cel: new RegExp(/^\d{2}\d{8}$/),
   cp: new RegExp(/^[0-9]{5}$/),
   correo: new RegExp(/^[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙñÑ0-9_.+-]+@[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙñÑ0-9-]+\.[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙñÑ0-9-.]+$/),
-  school: new RegExp(/^[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙñÑ\s]{1,25}$/),
+  escuela: new RegExp(/^[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙñÑ\s]{1,25}$/),
   promedio: new RegExp(/^([6-9]+\.?[0-9]{0,2})$/), 
 };
 
@@ -27,7 +27,7 @@ const validarNumeroBoleta = () => {
   // Realizar la(s) validación(es) pertinente(s).
   if (!expresionesRegulares.numeroBoleta.test(textoBoleta)) {
     // Si es inválido, regresamos el mensaje de error.
-    return "Numero de boleta invalido";
+    return "Número de boleta inválido";
   }
 };
 
@@ -42,7 +42,7 @@ const validarNombre = () => {
   // Realizar la(s) validación(es) pertinente(s).
   if (!expresionesRegulares.nombre.test(textoNombre)) {
     // Si es inválido, regresamos el mensaje de error.
-    return "El nombre es invalido, sólamente se admiten letras";
+    return "El nombre es inválido, sólamente se admiten letras";
   }
 };
 
@@ -57,7 +57,7 @@ const validarApaterno = () => {
   // Realizar la(s) validación(es) pertinente(s).
   if (!expresionesRegulares.apaterno.test(textoApaterno)) {
     // Si es inválido, regresamos el mensaje de error.
-    return "El apellido paterno es invalido, sólamente se admiten letras";
+    return "El apellido paterno es inválido, sólamente se admiten letras";
   }
 };
 // Validar apellido materno
@@ -71,7 +71,7 @@ const validarAmaterno = () => {
   // Realizar la(s) validación(es) pertinente(s).
   if (!expresionesRegulares.amaterno.test(textoAmaterno)) {
     // Si es inválido, regresamos el mensaje de error.
-    return "El apellido materno es invalido, solamente se admiten letras";
+    return "El apellido materno es inválido, sólamente se admiten letras";
   }
 };
 
@@ -102,7 +102,7 @@ const validarCurp = () => {
 
   // Realizar la(s) validación(es) pertinente(s).
   if (!expresionesRegulares.curp.test(textoCURP)) {
-    return "El CURP es invalido";
+    return "El CURP es inválido";
   }
 };
 
@@ -117,7 +117,7 @@ const validarCalle = () => {
   // Realizar la(s) validación(es) pertinente(s).
   if (!expresionesRegulares.calle.test(textoCalle)) {
     // Si es inválido, regresamos el mensaje de error.
-    return "La calle y numero es invalido, ";
+    return "La calle y numero es inválido, ";
   }
 };
 
@@ -132,7 +132,7 @@ const validarColonia = () => {
   // Realizar la(s) validación(es) pertinente(s).
   if (!expresionesRegulares.colonia.test(textoColonia)) {
     // Si es inválido, regresamos el mensaje de error.
-    return "La colonia es invalida ";
+    return "La colonia es inválida ";
   }
 };
 
@@ -147,7 +147,7 @@ const validarCodigoPostal = () => {
   // Realizar la(s) validación(es) pertinente(s).
   if (!expresionesRegulares.cp.test(textoCP)) {
     // Si es inválido, regresamos el mensaje de error.
-    return "El codigo postal es invalido,sólamente se admiten numeros";
+    return "El codigo postal es inválido,sólamente se admiten numeros";
   }
 };
 
@@ -162,7 +162,7 @@ const validarCelular = () => {
   // Realizar la(s) validación(es) pertinente(s).
   if (!expresionesRegulares.cel.test(textoCel)) {
     // Si es inválido, regresamos el mensaje de error.
-    return "El celular es invalido,sólamente se admiten numeros";
+    return "El celular es inválido,sólamente se admiten numeros";
   }
 };
 
@@ -177,20 +177,20 @@ const validarCorreo = () => {
   // Realizar la(s) validación(es) pertinente(s).
   if (!expresionesRegulares.correo.test(textoCorreo)) {
     // Si es inválido, regresamos el mensaje de error.
-    return "El correo electronico es invalido";
+    return "El correo electrónico es inválido";
   }
 };
 
 // Validar escuela
 const validarEscuela = () => {
   // Obtenener el campo asociado a escuela.
-  const school = document.getElementById("school");
+  const escuela = document.getElementById("school");
 
   // Obtener el texto dentro del campo.
-  const textoSchool = school.value;
+  const textoEscuela = escuela.value;
 
   // Realizar la(s) validación(es) pertinente(s).
-  if (!expresionesRegulares.school.test(textoSchool)) {
+  if (!expresionesRegulares.escuela.test(textoEscuela)) {
     // Si es inválido, regresamos el mensaje de error.
     //return "La escuela es inválida";
   }
@@ -207,7 +207,7 @@ const validarPromedio = () => {
   // Realizar la(s) validación(es) pertinente(s).
   if (!expresionesRegulares.escuela.test(textoPromedio)) {
     // Si es inválido, regresamos el mensaje de error.
-    return "El promedio es invalido";
+    return "El promedio es inválido";
   }
 };
 
@@ -225,7 +225,7 @@ const validarCampos = (event) => {
   const errorCP = validarCodigoPostal();
   const errorCel = validarCelular();
   const errorCorreo = validarCorreo();
-  const errorSchool = validarSchool();
+  const errorEscuela = validarEscuela();
   const errorPromedio = validarPromedio();
 
   // Verificamos el estado de la validación.
@@ -241,14 +241,14 @@ const validarCampos = (event) => {
     errorCP ||
     errorCel ||
     errorCorreo ||
-    errorSchool ||
+    errorEscuela ||
     errorPromedio
   ) {
     // Desactivamos el envío del formulario.
     event.preventDefault();
 
     // Texto inicial de alerta.
-    let textoAlerta = ".::Formulario Invalido::.";
+    let textoAlerta = "¡Formulario Inválido!";
 
     // Texto de error por validación.
     if (errorBoleta)
@@ -267,7 +267,7 @@ const validarCampos = (event) => {
     if (errorCP) textoAlerta += `\nError en codigo postal: ${errorCP}`;
     if (errorCel) textoAlerta += `\nError en celular: ${errorCel}`;
     if (errorCorreo) textoAlerta += `\nError en correo electronico: ${errorCorreo}`;
-    if (errorSchool) textoAlerta += `\nError en escuela: ${errorSchool}`;
+    if (errorEscuela) textoAlerta += `\nError en escuela: ${errorEscuela}`;
     if (errorPromedio) textoAlerta += `\nError en promedio: ${errorPromedio}`;
 
     // Mostramos una alerta con el mensaje final de error.
@@ -277,7 +277,7 @@ const validarCampos = (event) => {
     console.log(textoAlerta);
   } else {
     // Logueamos en la consola un mensaje de confirmación.
-    console.log("Formulario valido, enviando datos al servidor...");
+    console.log("Formulario válido, enviando datos al servidor...");
 
     // Regresamos verdadero para reactivar el evento.
     return true;
@@ -289,3 +289,4 @@ const formulario = document.getElementById("formulario");
 
 // Añadimos el evento de escucha para cuando se "envíe".
 formulario.addEventListener("submit", validarCampos);
+formulario.addEventListener("button", validarCampos);

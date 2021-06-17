@@ -67,116 +67,97 @@
     $row = $resultado->fetch_assoc();
 
     $index=$row['Num'];
+    $i=$row['Num'];
 
-    if($row['Num']==0){
-        $row=1;
+    if($index==0){
+        $index=1;
         $horario="Lunes 3 de Agosto del 2021, 8:30";
         $lab="Laboratorio 1";
-        $turno = "INSERT INTO examen VALUES ($row,'$horario','$lab','$bol')";
+        $turno = "INSERT INTO examen VALUES (0,'$horario','$lab','$bol')";
     }else{
         if($index==1&&$index<=150){
-            if ($index==1&&$index<26) {
-                $index=$index+1;
+            if ($index==1&&$index<26){
                 $horario="Lunes 3 de Agosto del 2021, 8:30 am";
                 $lab="Laboratorio 1";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }elseif ($index==26&&$index<51) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 8:30 am";
                 $lab="Laboratorio 2";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }elseif ($index==51&&$$index<76) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 8:30 am";
                 $lab="Laboratorio 3";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }elseif ($index==76&&$index<101) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 8:30 am";
                 $lab="Laboratorio 4";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }elseif ($index==101&&$index<126) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 8:30 am";
                 $lab="Laboratorio 5";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }elseif ($index==126&&$index<151) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 8:30 am";
                 $lab="Laboratorio 6";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }
         }elseif ($index==151&&$index<=300){
             if ($index==151&&$index<176) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 9:45 am";
                 $lab="Laboratorio 1";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }elseif ($index==176&&$index<201) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 9:45 am";
                 $lab="Laboratorio 2";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }elseif ($index==201&&$index<226) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 9:45 am";
                 $lab="Laboratorio 3";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }elseif ($index==226&&$index<251) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 9:45 am";
                 $lab="Laboratorio 4";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }elseif ($index==251&&$index<276) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 9:45 am";
                 $lab="Laboratorio 5";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }elseif ($index==276&&$index<301) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 9:45 am";
                 $lab="Laboratorio 6";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }
         }elseif ($index==301&&$index<=450) {
             if ($index==301&&$index<326) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 10:40 am";
                 $lab="Laboratorio 1";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }elseif ($index==326&&$index<351) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 10:40 am";
                 $lab="Laboratorio 2";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }elseif ($index==351&&$index<376) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 10:40 am";
                 $lab="Laboratorio 3";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }elseif ($index==376&&$index<401) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 10:40 am";
                 $lab="Laboratorio 4";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }elseif ($index==401&&$index<426) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 10:40 am";
                 $lab="Laboratorio 5";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }elseif ($index==426&&$index<451) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 10:40 am";
                 $lab="Laboratorio 6";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";
             }
         }else{
             if ($index>=451) {
-                $index=$index+1;
                 $horario="Lunes 3 de Agosto del 2021, 10:40 am";
                 $lab="Laboratorio 1";
-                $turno = "INSERT INTO examen VALUES ($index,'$horario','$lab','$bol')";
-            }
+                $turno = "INSERT INTO examen VALUES (null,'$horario','$lab','$bol')";            }
         }
     }
         
@@ -459,7 +440,7 @@
     $pdf->SetTextColor(3,3,3); //Letra color negro
     $pdf->Cell(60, 5,$lab, 1,0,'C','R');
 
-    $pdf->Output('F', 'C:\wamp64\www\Tecweb\ficha.pdf'); 
+    $pdf->Output('F', 'C:\wamp64\www\Proyecto\ficha.pdf'); 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

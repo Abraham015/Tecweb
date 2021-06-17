@@ -8,43 +8,45 @@
 <body>
 <h1>Write</h1>
 <code>Write(<b>float</b> h, <b>string</b> txt [, <b>mixed</b> link])</code>
-<h2>Descripción</h2>
-Este método imprime el texto desde la posición actual. Cuando el márgen derecho es alcanzado (o el carácter \n es alcanzado)
-se produce un salto de línea y el texto continua desde el márgen izquierdo. Una ves el método termine, la posición actual es dejada justo al final del texto.
+<h2>Description</h2>
+Cette méthode imprime du texte à partir de la position courante. Lorsque la marge droite est
+atteinte (ou que le caractère \n est rencontré), un saut de ligne est effectué et le texte
+continue à partir de la marge gauche. Au retour de la méthode, la position courante est située
+juste à la fin du texte.
 <br>
-Es posible poner una referencia sobre el texto.
-<h2>Parámetros</h2>
+Il est possible de mettre un lien sur le texte.
+<h2>Paramètres</h2>
 <dl class="param">
 <dt><code>h</code></dt>
 <dd>
-Alto de línea.
+Hauteur de la ligne.
 </dd>
 <dt><code>txt</code></dt>
 <dd>
-Cadena a ser impresa.
+Chaîne à imprimer.
 </dd>
 <dt><code>link</code></dt>
 <dd>
-URL o identificador regresado por AddLink().
+URL ou identifiant retourné par AddLink().
 </dd>
 </dl>
-<h2>Ejemplo</h2>
+<h2>Exemple</h2>
 <div class="doc-source">
-<pre><code>// Comienza con fuente regular
+<pre><code>// Début en police normale
 $pdf-&gt;SetFont('Arial','',14);
-$pdf-&gt;Write(5,'Visit ');
-// Then put a blue underlined link
+$pdf-&gt;Write(5,'Visitez ');
+// Lien en bleu souligné
 $pdf-&gt;SetTextColor(0,0,255);
 $pdf-&gt;SetFont('','U');
 $pdf-&gt;Write(5,'www.fpdf.org','http://www.fpdf.org');</code></pre>
 </div>
-<h2>Vea además</h2>
+<h2>Voir</h2>
 <a href="setfont.htm">SetFont</a>,
 <a href="settextcolor.htm">SetTextColor</a>,
 <a href="addlink.htm">AddLink</a>,
 <a href="multicell.htm">MultiCell</a>,
 <a href="setautopagebreak.htm">SetAutoPageBreak</a>
 <hr style="margin-top:1.5em">
-<div style="text-align:center"><a href="index.htm">Inicio</a></div>
+<div style="text-align:center"><a href="index.htm">Index</a></div>
 </body>
 </html>

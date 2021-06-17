@@ -10,14 +10,14 @@ protected $HREF = '';
 
 function WriteHTML($html)
 {
-	// Intérprete de HTML
+	// Parseur HTML
 	$html = str_replace("\n",' ',$html);
 	$a = preg_split('/<(.*)>/U',$html,-1,PREG_SPLIT_DELIM_CAPTURE);
 	foreach($a as $i=>$e)
 	{
 		if($i%2==0)
 		{
-			// Text
+			// Texte
 			if($this->HREF)
 				$this->PutLink($this->HREF,$e);
 			else
@@ -25,12 +25,12 @@ function WriteHTML($html)
 		}
 		else
 		{
-			// Etiqueta
+			// Balise
 			if($e[0]=='/')
 				$this->CloseTag(strtoupper(substr($e,1)));
 			else
 			{
-				// Extraer atributos
+				// Extraction des attributs
 				$a2 = explode(' ',$e);
 				$tag = strtoupper(array_shift($a2));
 				$attr = array();
@@ -47,7 +47,7 @@ function WriteHTML($html)
 
 function OpenTag($tag, $attr)
 {
-	// Etiqueta de apertura
+	// Balise ouvrante
 	if($tag=='B' || $tag=='I' || $tag=='U')
 		$this->SetStyle($tag,true);
 	if($tag=='A')
@@ -58,7 +58,7 @@ function OpenTag($tag, $attr)
 
 function CloseTag($tag)
 {
-	// Etiqueta de cierre
+	// Balise fermante
 	if($tag=='B' || $tag=='I' || $tag=='U')
 		$this->SetStyle($tag,false);
 	if($tag=='A')
@@ -67,7 +67,7 @@ function CloseTag($tag)
 
 function SetStyle($tag, $enable)
 {
-	// Modificar estilo y escoger la fuente correspondiente
+	// Modifie le style et sélectionne la police correspondante
 	$this->$tag += ($enable ? 1 : -1);
 	$style = '';
 	foreach(array('B', 'I', 'U') as $s)
@@ -80,7 +80,7 @@ function SetStyle($tag, $enable)
 
 function PutLink($URL, $txt)
 {
-	// Escribir un hiper-enlace
+	// Place un hyperlien
 	$this->SetTextColor(0,0,255);
 	$this->SetStyle('U',true);
 	$this->Write(5,$txt,$URL);
@@ -89,20 +89,21 @@ function PutLink($URL, $txt)
 }
 }
 
-$html = 'Ahora puede imprimir fácilmente texto mezclando diferentes estilos: <b>negrita</b>, <i>itálica</i>,
-<u>subrayado</u>, o ¡ <b><i><u>todos a la vez</u></i></b>!<br><br>También puede incluir enlaces en el
-texto, como <a href="http://www.fpdf.org">www.fpdf.org</a>, o en una imagen: pulse en el logotipo.';
+$html = 'Vous pouvez maintenant imprimer facilement du texte mélangeant différents styles : <b>gras</b>,
+<i>italique</i>, <u>souligné</u>, ou <b><i><u>tous à la fois</u></i></b> !<br><br>Vous pouvez aussi
+insérer des liens sous forme textuelle, comme <a href="http://www.fpdf.org">www.fpdf.org</a>, ou bien
+sous forme d\'image : cliquez sur le logo.';
 
 $pdf = new PDF();
-// Primera página
+// Première page
 $pdf->AddPage();
 $pdf->SetFont('Arial','',20);
-$pdf->Write(5,'Para saber qué hay de nuevo en este tutorial, pulse ');
+$pdf->Write(5,'Pour découvrir les nouveautés de ce tutoriel, cliquez ');
 $pdf->SetFont('','U');
 $link = $pdf->AddLink();
-$pdf->Write(5,'aquí',$link);
+$pdf->Write(5,'ici',$link);
 $pdf->SetFont('');
-// Segunda página
+// Seconde page
 $pdf->AddPage();
 $pdf->SetLink($link);
 $pdf->Image('logo.png',10,12,30,0,'','http://www.fpdf.org');
