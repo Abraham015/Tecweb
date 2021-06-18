@@ -1,0 +1,163 @@
+.datos{
+	background-image:url(images/wef-min);  
+	background-position: center;
+	background-attachment: fixed; 
+	background-size:cover;
+}
+
+#tabla-container{
+		margin:150px auto;
+		width: 600px;
+		position: absolute;
+		top:50%;
+		left: 40%;
+		transform: translate(-47.5%,-95%);
+}
+
+table{
+	background-color: white;
+	text-align: center;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td{
+	padding: 20px;
+}
+
+img{
+	width: 45px;
+	height: 45px;
+}
+
+.barra{
+
+}
+
+.modificar{
+	background-size: 100%,100%;
+	border:none;
+	cursor: pointer;
+	padding: 5px 15px;
+}
+
+thead{
+	background-color: #246355;
+	border-bottom: 0px solid #0F362D;
+	color: white;
+}
+
+.titulo{
+  background-color: #246355;
+  border-bottom: 3px solid #0F362D;
+  color: white;
+}
+
+tr:nth-child(even){
+	background-color: #DDD;
+}
+
+.GridviewScrollHeader TH, .GridviewScrollHeader TD 
+{ 
+    padding: 3px;
+    white-space: nowrap; 
+    border-right: 1px solid #AAAAAA; 
+    border-bottom: 1px solid #AAAAAA; 
+   vertical-align: middle;
+    background-color:#03579D;
+    color:#FFF;
+    font-size:20px;
+} 
+.GridviewScrollItem TD 
+{ 
+    padding: 3px; 
+    white-space: nowrap; 
+    border-right: 1px solid #AAAAAA; 
+    border-bottom: 0.7px solid #AAAAAA;
+    font-size:20px;
+
+} 
+.GridviewScrollPager  
+{ 
+    border-top: 1px solid #AAAAAA; 
+    background-color: #FFFFFF; 
+} 
+.GridviewScrollPager TD 
+{ 
+    padding-top: 3px; 
+    font-size: 14px; 
+    padding-left: 5px; 
+    padding-right: 5px; 
+} 
+.GridviewScrollPager A 
+{ 
+    color: #666666; 
+}.GridviewScrollPager SPAN
+{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.container {
+background-color: #03579D;
+  height: auto;
+  margin-top:0;
+  line-height: 60px;
+  width: 100%;
+  display: inline-block;
+  border-radius: 15px;
+}
+
+.container2 {
+background-color: #03579D;
+ height: auto;
+  margin-top:0;
+  width: 100%;
+  display: inline-block;
+  border-radius: 15px;
+}
+
+.GridviewScrollHeader2 TH, .GridviewScrollHeader TD 
+{ 
+    padding: 3px;
+    white-space: nowrap; 
+    border-right: 1px solid #AAAAAA; 
+    border-bottom: 1px solid #AAAAAA; 
+    vertical-align: middle;
+    background-color:#03579D;
+    color:#FFF;
+    font-size:14px;
+} 
+.GridviewScrollItem2 TD 
+ { 
+    padding: 3px; 
+    white-space: nowrap; 
+    border-right: 1px solid #AAAAAA; 
+   border-bottom: 0.7px solid #AAAAAA;
+    font-size:14px;
+
+} 
+tr:hover{
+	background-color: #369681;
+	color: white;
+}
+
+.botones{
+	width: 300px;
+	height: 50px;
+	display: block;
+	margin: auto;
+	margin-top: 0px;
+	color: white;
+	background: #952F57;
+	border-style: none;
+	outline: 0px;
+	border-radius: 50px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+a{
+	text-decoration: none;
+}

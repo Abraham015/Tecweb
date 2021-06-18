@@ -1,0 +1,99 @@
+.datos{
+	background-image:url(images/wef-min);  
+	background-position: center;
+	background-attachment: fixed; 
+	background-size:cover;
+}
+
+#tabla-container{
+		margin:150px auto;
+    width: 600px;
+    position: absolute;
+    top:30%;
+    left: 35%;
+    transform: translate(-47.5%,-95%);
+}
+
+table{
+	background-color: white;
+	text-align: center;
+	width: 100%;
+	border-collapse: collapse;
+  position: absolute;
+  left: 60%;
+  margin-left: -300px;
+  top: 50%;
+  margin-top: -300px;
+}
+
+th, td{
+	padding: 20px;
+}
+
+.titulo{
+  padding: 5px;
+}
+
+img{
+	width: 45px;
+	height: 45px;
+}
+
+.modificar{
+	background-size: 100%,100%;
+	border:none;
+	cursor: pointer;
+	padding: 5px 15px;
+}
+
+thead{
+	background-color: #246355;
+	border-bottom: 5px solid #0F362D;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: #DDD;
+}
+
+.botones{
+	width: 300px;
+	height: 50px;
+	display: block;
+	margin: auto;
+	margin-top: 0px;
+	color: white;
+	background: #952F57;
+	border-style: none;
+	outline: 0px;
+	border-radius: 50px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+a{
+	text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}

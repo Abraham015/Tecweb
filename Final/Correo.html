@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>.: Registro Alumnos :. </title>
+    <link rel="stylesheet" href="EstiloFormulario.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        input[type="submit"],input[type="button"]{
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;   
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: darkgrey;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+    </style>
+</head>
+<body>
+    <table align="center">
+      <tr>
+        <td><img src="images/Blanco.png" width="200px" height="150px"></td>
+        <td><h1 align="center">&nbsp;Registro de Datos Generales</h1>
+    <p>Alumnos de Nuevo Ingreso
+    <br>(Agosto 2021)</p></td>
+    <td><img src="images/blanco1.png"></td>
+      </tr>
+    </table>
+<form method="POST" action="Correo.php">
+    <table align="center">
+            <tr>
+              <td style="color:white">Correo Electr&oacutenico: <input type="text" name="correo" required></td>
+            </tr>
+    </table>
+    <br>
+    <center><input type="submit" value="Enviar"/>&nbsp;&nbsp;&nbsp;<a href='Correo.php.php'><input type='button' value='Regresar'></a></center>
+</form>
+</body>
+</html>
