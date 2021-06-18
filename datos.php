@@ -37,6 +37,7 @@
 			case '17': $procedencia="CECyT #17 Leon-Guanajuato"; break;
 			case '18': $procedencia="CECyT #18 Zacatecas"; break;
 			case 'C1': $procedencia="CET #1 Walter Cross Buchanan"; break;
+			case '19': $procedencia=$_REQUEST["escuela"]; break;
 			default: $procedencia=$_REQUEST["school"];
 		}
 		switch ($_REQUEST["Estado"]) {

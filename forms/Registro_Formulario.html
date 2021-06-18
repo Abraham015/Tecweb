@@ -7,6 +7,7 @@
     <title>.: Registro Alumnos :. </title>
     <link rel="stylesheet" href="../EstiloFormulario.css">
     <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.6.2.min.js"></script> 
 </head>
 <body>
     <table align="center">
@@ -189,7 +190,7 @@
           <tr>
             <td>
               Escuela de Procedencia:
-              <select name="Procedencia" required>
+              <select name="Procedencia" required onchange="if(this.value=='19') {document.getElementById('escuela').disabled = false} else {document.getElementById('escuela').disabled = true} ">
                 <option value="" selected disabled>Escoge una opci&oacuten</option>
                 <option value="1">CECyT #1 "Gonzalo V&aacutezquez Vela"</option>
                 <option value="2">CECyT #2 "Miguel Bernard"</option>
@@ -228,6 +229,7 @@
                 <option value="17">CECyT #17 "Le&oacuten-Guanajuato"</option>
                 <option value="18">CECyT #18 "Zacatecas"</option>
                 <option value="C1">CET #1 "Walter Cross Buchanan"</option>
+                <option value="19">Otro</option>
               </select>
             </td>
           </tr>
@@ -284,8 +286,7 @@
                 type="text"
                 id="escuela"
                 name="escuela"
-                placeholder="Registra tu Escuela"   
-                
+                placeholder="Registra tu Escuela"
               />
             </td>
           </tr>

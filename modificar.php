@@ -214,7 +214,7 @@
         <hr><h2>Procedencia :</h2><hr>
         <table align="center" style="text-align: center;">
           <tr>
-            <td>Escuela de Procedencia:<select name="Procedencia" required>
+            <td>Escuela de Procedencia: <select name="Procedencia" required onchange="if(this.value=='19') {document.getElementById('escuela').disabled = false} else {document.getElementById('escuela').disabled = true} ">
                       <option value="default">Escoge una opci&oacuten</option>
                       <option value="1" <?php if($row2['Escuela']=='CECyT #1 Gonzalo Vazquez Vela') echo 'selected'; ?> >CECyT #1 "Gonzalo V&aacutezquez Vela"</option>
                       <option value="2" <?php if($row2['Escuela']=='CECyT #2 Miguel Bernard') echo 'selected'; ?> >CECyT #2 "Miguel Bernard"</option>
@@ -235,6 +235,7 @@
                       <option value="17" <?php if($row2['Escuela']=='CECyT #17 Leon-Guanajuato') echo 'selected'; ?> >CECyT #17 "Le&oacuten-Guanajuato"</option>
                       <option value="18" <?php if($row2['Escuela']=='CECyT #18 Zacatecas') echo 'selected'; ?> >CECyT #18 "Zacatecas"</option>
                       <option value="C1" <?php if($row2['Escuela']=='CET #1 Walter Cross Buchanan') echo 'selected'; ?> >CET #1 "Walter Cross Buchanan"</option>
+                      <option value="19" <?php if($row2['Escuela']=='Otro') echo 'selected'; ?> >Otro</option>
                     </select>
                     </td>
           </tr>

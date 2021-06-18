@@ -1,6 +1,6 @@
 // Biblioteca de validaciones.
 const expresionesRegulares = {
-  numeroBoleta: new RegExp(/^\d{10}$/),
+  numeroBoleta: new RegExp(/^([0-9]{10,10}|(PE|PP)[0-9]{8,8})(?!([A-Z]|[0-9]))$/),
   nombre: new RegExp(/^[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙñÑ\u00f1\u00d1\s]{1,40}$/),
   apaterno: new RegExp(/^[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙñÑ\u00f1\u00d1\s]{1,25}$/),
   amaterno: new RegExp(/^[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙñÑ\u00f1\u00d1\s]{1,25}$/),
