@@ -46,8 +46,8 @@
     $resultado2=$conn->query( "SELECT * FROM Procedencia WHERE Boleta = '$bol'");
     $row2 = $resultado2->fetch_assoc();
 
-    $resultado3=$conn->query( "SELECT * FROM examen WHERE Boleta = '$bol'");
-    $row3=mysqli_query($conn,$resultado3);
+    $resultado3=$conn->query( "SELECT * FROM examen WHERE Boletaex = '$bol'");
+    $row3 = $resultado3->fetch_assoc();
 
     //Se obtendrán de los row las variable
     $bol=$row['Boleta'];
@@ -324,7 +324,7 @@
     $pdf->SetTextColor(3,3,3); //Letra color negro
     $pdf->Cell(60, 5,$lab, 1,0,'C','R');
 
-    $pdf->Output('F', 'C:\wamp64\www\Proyecto\ficha.pdf'); 
+    $pdf->Output('F', 'C:\wamp64\www\Tecweb\ficha.pdf'); 
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

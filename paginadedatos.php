@@ -15,7 +15,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8">
-  <title>.: Datos de Alumnos :. </title>
+  <title>.: Datos de Alumnos :.</title>
   <link rel="stylesheet" type="text/css" href="style3.css">
 
 </head>
@@ -27,7 +27,7 @@
 		</thead>
 		<thead>
 			<tr>
-				<th colspan="4" align="center" class="titulo"><a href="registroalumno.html"><button class="botones">Crear nuevo registro</button></a></th>
+				<th colspan="4" align="center" class="titulo"><a href="forms/Registro_Formulario.html"><button class="botones">Crear nuevo registro</button></a></th>
 				<th colspan="4" align="center" class="titulo"><a href="cerrarsesion.php"><button class="botones">Cerrar Sesión</button></th>
 			</tr>
 		</thead>

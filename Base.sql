@@ -41,8 +41,6 @@ alter table Contacto;
 alter table Procedencia;
 alter table examen;
 
-insert into examen values(3,'prueba', 'prueba', 'prueba');
-
 select * from identidad;
 select * from Contacto;
 select * from Procedencia;
